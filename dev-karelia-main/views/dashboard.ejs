@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('./header'); %>
+    </header>
+    <main>
+        <div>
+            <%- include('./tabs'); %>
+        </div>
+        <div class="container">
+            <div class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center">
+                <p class="mb-3 h4">Welcome <%= user %></p>
+                <p>Explore your API key and other features below.</p>
+                <div id="api-key-container" class="mt-5">
+                    <label for="apiKey">API key:</label>
+                    <input type="password" id="apiKey" value="<%= apiKey %>" readonly>
+                    <button onclick="copyApiKey()">Copy</button>
+                    <p id="information-text" class="mt-3">Key copied.</p>
+                </div>
+                <script>
+
+                    const copyApiKey = () => {
+
+                        const apiKeyInput = document.getElementById("apiKey");
+
+                        // Selects the content of the apikey text field.
+                        apiKeyInput.select();
+
+                        // Copy the text to the clipboard and display the info message 'Key copied'.
+                        navigator.clipboard.writeText(apiKeyInput.value)
+                            .then(() => {
+
+                                document.getElementById("information-text").style.display = "block";
+
+                                // Show info-text for one second.
+                                setTimeout(() => {
+                                    document.getElementById("information-text").style.display = "none";
+                                }, 1000);
+                            })
+                            .catch(err => console.error("copying failed"));
+                    }
+
+                </script>
+            </div>
+            <!-- Jumbotron -->
+            <div class="row">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('./footer'); %>
+    </footer>
+</body>
+
+</html>

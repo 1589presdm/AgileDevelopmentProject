@@ -1,0 +1,96 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #19232b;  /* 25, 35, 43 */
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(209, 201, 201);
+}
+
+.nav-link {
+  color: rgb(209, 201, 201);
+}
+
+.nav {
+  color: rgb(209, 201, 201);
+  margin-bottom: 30px;
+}
+
+.d-flex {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+a {
+  color: rgb(209, 201, 201);
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+.nav-link:link { 
+  text-decoration: none; 
+} 
+.nav-link:visited { 
+  text-decoration: none; 
+} 
+.nav-link:hover { 
+  text-decoration: none; 
+} 
+.nav-link:active { 
+  text-decoration: none; 
+}
+
+.facade {
+  background-image: url("../images/valopuu.png");
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: rgb(209, 201, 201);
+}
+
+p {
+  color: rgb(209, 201, 201);
+}
+
+.card {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #19232b;  /* 25, 35, 43 */
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(209, 201, 201); 
+}
+
+button {
+  background-color: lightgreen;
+}
+
+button:hover {
+  border-color: rgb(209, 201, 201); 
+}
+
+button:active {
+  transform: scale(0.95); 
+}
+
+#api-key-container {
+  display: block;
+}
+
+#information-text {
+  display: none;
+}
+
+#response-message {
+  display: none;
+}

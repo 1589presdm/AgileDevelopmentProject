@@ -1,0 +1,25 @@
+<ul class="nav justify-content-center lead">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Inspiration</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/gettingstarted">Getting started</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/partners">For Organizations</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/artifacts">Apps, Libs & Repos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/apis">Karelia APIs</a>
+    </li>
+    <li class="nav-item">
+        <% if (isLoggedIn) { %>
+        <a href="/dashboard" class="nav-link">Dashboard</a>
+        <a href="/logout" class="nav-link">Log out</a>
+        <% } else { %>
+        <a href="/login" class="nav-link">Log in</a>
+        <% } %>
+    </li>
+</ul>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('./header'); %>
+    </header>
+    <main>
+        <div>
+            <%- include('./tabs'); %>
+        </div>
+        <div class="container">
+            <div class="card float-start" style="width: 200px;">
+                <img class="card-img-top" src="../images/openapi-stack-logo.png" style="width: 120px; height: 120px"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Campus API</h5>
+                    <p class="card-text">Karelia Campus OpenAPI 3 for developing smart campus solutions.</p>
+                    <a href="https://campus-openapi.azurewebsites.net/doc/" class="btn btn-primary">API specs</a>
+                </div>
+            </div>
+            <div class="card" style="width: 200px;">
+                <img class="card-img-top" src="../images/asyncapi-logo.png" style="width: 120px; height: 120px"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Campus API</h5>
+                    <p class="card-text">Karelia Campus AsyncAPI for developing smart campus solutions.</p>
+                    <a href="#" class="btn btn-primary">API specs</a>
+                </div>
+            </div>
+            <div class="float-none">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('./footer'); %>
+    </footer>
+</body>
+
+</html>
