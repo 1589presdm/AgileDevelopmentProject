@@ -1,17 +1,17 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #19232b;  /* 25, 35, 43 */
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(209, 201, 201);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .nav-link {
-  color: rgb(209, 201, 201);
+  color: #ffffff;
 }
 
 .nav {
-  color: rgb(209, 201, 201);
+  color: #ffffff;
   margin-bottom: 30px;
 }
 
@@ -22,33 +22,22 @@ body {
   margin-left: 15px;
 }
 
-a {
-  color: rgb(209, 201, 201);
+a,
+a:link,
+a:visited,
+a:active,
+.nav-link,
+.nav-link:link,
+.nav-link:visited,
+.nav-link:active {
+  color: #ffffff;
+  text-decoration: none;
 }
 
-a:link { 
-  text-decoration: none; 
-} 
-a:visited { 
-  text-decoration: none; 
-} 
-a:hover { 
-  text-decoration: none; 
-} 
-a:active { 
-  text-decoration: none; 
-}
-.nav-link:link { 
-  text-decoration: none; 
-} 
-.nav-link:visited { 
-  text-decoration: none; 
-} 
-.nav-link:hover { 
-  text-decoration: none; 
-} 
-.nav-link:active { 
-  text-decoration: none; 
+a:hover,
+.nav-link:hover {
+  color: lightgreen;
+  text-decoration: none;
 }
 
 .facade {
@@ -57,18 +46,18 @@ a:active {
 }
 
 h1 {
-  color: rgb(209, 201, 201);
+  color: #ffffff;
 }
 
 p {
-  color: rgb(209, 201, 201);
+  color: #ffffff;
 }
 
 .card {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #19232b;  /* 25, 35, 43 */
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(209, 201, 201); 
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 button {
@@ -76,11 +65,11 @@ button {
 }
 
 button:hover {
-  border-color: rgb(209, 201, 201); 
+  border-color: rgb(209, 201, 201);
 }
 
 button:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 #api-key-container {
@@ -92,5 +81,5 @@ button:active {
 }
 
 #response-message {
-  display: none;
+  transition: all 0.3s ease-in-out;
 }

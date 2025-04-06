@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <%- include('./head'); %>
-</head>
+  </head>
 
-<body>
-    <header>
-        <%- include('./header'); %>
-    </header>
+  <body>
+    <header><%- include('./header'); %></header>
+
     <main>
-        <div>
-            <%- include('./tabs'); %>
-        </div>
-        <div class="container">
-            <div class="card float-start" style="width: 200px;">
-                <img class="card-img-top" src="../images/openapi-stack-logo.png" style="width: 120px; height: 120px"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Campus API</h5>
-                    <p class="card-text">Karelia Campus OpenAPI 3 for developing smart campus solutions.</p>
-                    <a href="https://campus-openapi.azurewebsites.net/doc/" class="btn btn-primary">API specs</a>
-                </div>
-            </div>
-            <div class="card" style="width: 200px;">
-                <img class="card-img-top" src="../images/asyncapi-logo.png" style="width: 120px; height: 120px"
-                    alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Campus API</h5>
-                    <p class="card-text">Karelia Campus AsyncAPI for developing smart campus solutions.</p>
-                    <a href="#" class="btn btn-primary">API specs</a>
-                </div>
-            </div>
-            <div class="float-none">
+      <div><%- include('./tabs'); %></div>
 
+      <div class="container mt-4">
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-3">
+            <div class="card text-center">
+              <img
+                class="card-img-top mx-auto d-block mt-3"
+                src="../images/openapi-stack-logo.png"
+                style="width: 120px; height: 120px"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Campus API</h5>
+                <p class="card-text">
+                  Karelia Campus OpenAPI 3 for developing smart campus
+                  solutions.
+                </p>
+                <a
+                  href="https://campus-openapi.azurewebsites.net/doc/"
+                  class="btn btn-primary"
+                  >API specs</a
+                >
+              </div>
             </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-3">
+            <div class="card text-center">
+              <img
+                class="card-img-top mx-auto d-block mt-3"
+                src="../images/asyncapi-logo.png"
+                style="width: 120px; height: 120px"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Campus API</h5>
+                <p class="card-text">
+                  Karelia Campus AsyncAPI for developing smart campus solutions.
+                </p>
+                <a href="#" class="btn btn-primary">API specs</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
-    <footer>
-        <%- include('./footer'); %>
-    </footer>
-</body>
 
+    <footer><%- include('./footer'); %></footer>
+  </body>
 </html>
