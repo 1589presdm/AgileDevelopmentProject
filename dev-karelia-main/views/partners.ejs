@@ -1,66 +1,108 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
     <%- include('./head'); %>
-</head>
+  </head>
 
-<body>
-    <header>
-        <%- include('./header'); %>
-    </header>
+  <body>
+    <header><%- include('./header'); %></header>
+
     <main>
-        <div>
-            <%- include('./tabs'); %>
-        </div>
-        <div class="container">
-            <div
-                class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center">
-                <p class="mb-3 h4">Develop Your Solutions with Student Team</p>
-                <div class="mb-4">
-                    Work-life orientation is reflected in our teaching through various types of student projects.
-                    These projects provide employers with an excellent opportunity to engage our skilled and enthusiastic students.
-                    The outcomes of these projects deliver solutions and ideas for the specific practical problem you define,
-                    whether it involves marketing planning or product development. The scope of work, scheduling,
-                    and implementation methods are always tailored collaboratively to meet the situation's needs.
-                </div>
-                <br>
-                <p class="mb-3 h4">Propose a Project Topic and Gain:</p>
-                <div class="mb-4">
-                    Fresh perspectives and development ideas to solve your challenges
-                    The latest research insights to enhance your operations
-                    Access to our modern learning and service environments
-                    Positive visibility and an opportunity to introduce your company to potential future employees
-                </div>
-                <br>
-                <p class="mb-3 h4">Project Workflow:</p>
-                <div class="mb-4">
-                    Define the Project Content:
-                        What practical problem do you need solutions for?
-                        What kind of expertise do you require?
-                    Get in Touch:
-                        Email: palvelut[at]karelia.fi
-                    Agree on Implementation and Details:
-                        We will determine the scope, schedule, and approach together.
-                    Students Execute the Project Under Instructor Guidance:
-                        Interim meetings involving the client can be arranged as needed.
-                    Presentation of Results:
-                        You are warmly invited to attend and provide feedback on the presentations!
-                    Duration and Timing:
-                        Varies by case, ranging from 1–2 days to an entire semester.
-                        Project proposals can be submitted year-round. Implementation takes place in the following semester—for example, a proposal submitted in the autumn semester will be executed in the spring.
-                        Projects are integrated into specific study modules.
-                    What is Expected from the Client?
-                        Requirements depend on the project's scope.
-                        Participation in meetings with students and university representatives as needed,
-                        as well as communication and providing information to project participants.
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <%- include('./footer'); %>
-    </footer>
-</body>
+      <div><%- include('./tabs'); %></div>
 
+      <div class="container">
+        <section
+          class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center"
+        >
+          <h2 class="mb-3">Develop Your Solutions with Student Team</h2>
+          <p class="mb-4">
+            Work-life orientation is reflected in our teaching through various
+            types of student projects. These projects provide employers with an
+            excellent opportunity to engage our skilled and enthusiastic
+            students. The outcomes of these projects deliver solutions and ideas
+            for the specific practical problem you define, whether it involves
+            marketing planning or product development.
+          </p>
+          <p class="mb-4">
+            The scope of work, scheduling, and implementation methods are always
+            tailored collaboratively to meet the situation's needs.
+          </p>
+
+          <h3 class="mb-3">Propose a Project Topic and Gain:</h3>
+          <ul class="text-start mb-4">
+            <li>
+              Fresh perspectives and development ideas to solve your challenges
+            </li>
+            <li>The latest research insights to enhance your operations</li>
+            <li>Access to our modern learning and service environments</li>
+            <li>
+              Positive visibility and an opportunity to introduce your company
+              to potential future employees
+            </li>
+          </ul>
+
+          <h3 class="mb-3">Project Workflow:</h3>
+          <ol class="text-start mb-4">
+            <li>
+              <strong>Define the Project Content:</strong>
+              <ul>
+                <li>What practical problem do you need solutions for?</li>
+                <li>What kind of expertise do you require?</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Get in Touch:</strong>
+              Email:
+              <a href="mailto:palvelut@karelia.fi" class="text-white"
+                >palvelut@karelia.fi</a
+              >
+            </li>
+            <li>
+              <strong>Agree on Implementation and Details:</strong>
+              We will determine the scope, schedule, and approach together.
+            </li>
+            <li>
+              <strong
+                >Students Execute the Project Under Instructor Guidance:</strong
+              >
+              Interim meetings involving the client can be arranged as needed.
+            </li>
+            <li>
+              <strong>Presentation of Results:</strong>
+              You are warmly invited to attend and provide feedback on the
+              presentations!
+            </li>
+          </ol>
+
+          <h3 class="mb-3">Duration and Timing:</h3>
+          <ul class="text-start mb-4">
+            <li>
+              Varies by case, ranging from 1–2 days to an entire semester.
+            </li>
+            <li>Project proposals can be submitted year-round.</li>
+            <li>
+              Implementation takes place in the following semester (e.g.,
+              proposal in autumn → execution in spring).
+            </li>
+            <li>Projects are integrated into specific study modules.</li>
+          </ul>
+
+          <h3 class="mb-3">What is Expected from the Client?</h3>
+          <ul class="text-start mb-4">
+            <li>Requirements depend on the project's scope.</li>
+            <li>
+              Participation in meetings with students and university
+              representatives as needed.
+            </li>
+            <li>
+              Providing information and communication to support project
+              execution.
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer><%- include('./footer'); %></footer>
+  </body>
 </html>
