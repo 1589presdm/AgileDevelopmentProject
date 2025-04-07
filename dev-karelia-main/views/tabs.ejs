@@ -1,25 +1,54 @@
-<ul class="nav justify-content-center lead">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Inspiration</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/gettingstarted">Getting started</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/partners">For Organizations</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/artifacts">Apps, Libs & Repos</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/apis">Karelia APIs</a>
-    </li>
-    <li class="nav-item">
+<nav class="navbar navbar-expand-md navbar-dark bg-black">
+  <div class="container-fluid">
+    <!-- Hampurilaisvalikon nappi omalla ikonilla -->
+    <button
+      class="navbar-toggler text-white border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars fa-lg"></i>
+    </button>
+
+    <!-- Navigointilinkit -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul
+        class="navbar-nav mx-auto mb-2 mb-md-0 lead justify-content-md-center"
+      >
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"
+            >Inspiration</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gettingstarted">Getting started</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/partners">For Organizations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/artifacts">Apps, Libs & Repos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/apis">Karelia APIs</a>
+        </li>
+
         <% if (isLoggedIn) { %>
-        <a href="/dashboard" class="nav-link">Dashboard</a>
-        <a href="/logout" class="nav-link">Log out</a>
+        <li class="nav-item">
+          <a href="/dashboard" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Log out</a>
+        </li>
         <% } else { %>
-        <a href="/login" class="nav-link">Log in</a>
+        <li class="nav-item">
+          <a href="/login" class="nav-link">Log in</a>
+        </li>
         <% } %>
-    </li>
-</ul>
+      </ul>
+    </div>
+  </div>
+</nav>
