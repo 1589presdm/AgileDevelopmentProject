@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <%- include('./head'); %>
-</head>
 
-<body>
-    <header>
-        <%- include('./header'); %>
-    </header>
+
+  </head>
+
+  <body>
+    <header><%- include('./header'); %></header>
     <main>
-        <div>
-            <%- include('./tabs'); %>
+      <div><%- include('./tabs'); %></div>
+      <div class="container">
+        <!-- Jumbotron -->
+        <!-- <div class="row bg-image d-flex justify-content-center align-items-center" -->
+        <div
+          class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center"
+        >
+        
+        <!--<p class="mb-3 h4">Access the Karelia APIs</p>
+          <p>
+            Get your API token by using the credentials given by your lecturer.
+            <p>The personal API token is valid only for 12 hours </p> <p>The grant should
+                not be used for production applications.</p>
+          </p>
+          <p>Get your API token by logging in.</p>
         </div>
-        <div class="container">
-            <!-- Jumbotron -->
-            <!-- <div class="row bg-image d-flex justify-content-center align-items-center" -->
-            <div class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center">
-                <p class="mb-3 h4">Access the Karelia APIs</p>
-                <p>Get your API token by using the credentials given by your lecturer. The personal API token is valid
-                    only for 12 hours.
-                    The grant should not be used for production applications.</p>
-                <p>Get your API token by logging in.</p>
-            </div>
-            <!-- Jumbotron -->
-            <div class="row">
-            </div>
-        </div>
-    </main>
-    <footer>
-        <%- include('./footer'); %>
-    </footer>
-</body>
+        <!-- Jumbotron -->
+        <div class="row"></div>
+      </div>
 
+
+      <!--animoidun otsikon lisääminen-->
+      <div class="text-center my-5">
+        <h1 class="animated-title">Getting Started</h1>
+      </div>
+      <!--Luodaan getting started rakenne ja lisätään numerokuvat-->
+      
+      <div class="row justify-content-center" style="margin-top: -10px;">
+        <div class="col-md6">
+          <div class="d-flex align-items-center justify-content-center  mb-3 fade-in">
+            <img src="/images/nro1.png" alt="Image 1" class="me-3" style="width: 80px; height: 80px;">
+            <div class="text-center">
+              <h5>Acces the Karelia APIs</h5>
+              <p>Get your API token by using the <br>credential given by your lecturer.</p>
+            </div>
+          </div> 
+          <div class="row justify-content-center">
+            <div class="col-md6">
+              <div class="d-flex align-items-center justify-content-center  mb-3 fade-in">
+                <img src="/images/nro2.png" alt="Image 2" class="me-3" style="width: 80px; height: 80px;">
+                <div class="text-center">
+                  <h5>Log In</h5>
+                  <p>Log in using the credentials you got.</p>
+                </div>
+              </div> 
+              <div class="row justify-content-center">
+                <div class="col-md6">
+                  <div class="d-flex align-items-center justify-content-center  mb-3 fade-in">
+                    <img src="/images/nro3.png" alt="Image 3" class="me-3" style="width: 80px; height: 80px;">
+                    <div class="text-center">
+                      <h5>Explore</h5>
+                      <p>Now you have access to dashboard, <br> have fun! </p>
+                    </div>
+                  </div> 
+    </main>
+    <!--Annetaan vähän lisätilaa sivulle ennen footer osiota-->
+    <div style="margin-top:200px"></div>
+    <footer><%- include('./footer'); %></footer>
+  </body>
 </html>
