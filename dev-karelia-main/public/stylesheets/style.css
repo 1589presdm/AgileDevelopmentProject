@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  background-color: #000000;
+  background-color: #181616;
   color: #ffffff;
 }
 
@@ -52,11 +52,11 @@ h1 {
 p {
   color: #ffffff;
 }
-
+/*repos sivun tyylit */
 .card {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  background-color: #000000;
+  background-color: #2c2929;
   color: #ffffff;
 }
 
@@ -151,4 +151,8 @@ button:active {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.navbar-custom {
+  background-color: #181616; /* Aseta haluamasi väri */
 }
