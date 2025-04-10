@@ -36,7 +36,7 @@ a:active,
 
 a:hover,
 .nav-link:hover {
-  color: lightgreen;
+  color: darkgreen;
   text-decoration: none;
 }
 
@@ -82,4 +82,73 @@ button:active {
 
 #response-message {
   transition: all 0.3s ease-in-out;
+}
+
+/*animaatio Getting started otsikolle */
+.animated-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInSlideDown 7s ease-out forwards;
+}
+
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smokywhite hehku logolle */
+.logo-glow {
+  box-shadow: 0 0 25px 10px rgb(228, 225, 225); /* Hehkun väri ja koko */
+  transition: box-shadow 0.3s ease-in-out; /* Animaatio hover-tilaa varten */
+}
+
+.logo-glow:hover {
+  box-shadow: 0 0 35px 15px rgb(3, 68, 3); /* Korostettu hehku hover-tilassa */
+}
+
+/* Animaatio getting started sivun rakenteen kuva-teksti-osuuksille */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 7s ease-out forwards;
+}
+
+/* Animaation määrittely */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animaatio tekstille landingpage, kuvan päällä */
+.animated-text {
+  opacity: 0;
+  font-weight: bold;
+  transform: translateY(20px);
+  animation: fadeInSlideDown 7s ease-out forwards;
+}
+
+/* Animaation määrittely */
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
