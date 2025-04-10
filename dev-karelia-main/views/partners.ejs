@@ -4,13 +4,36 @@
     <%- include('./head'); %>
   </head>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".scroll-fade-in");
+
+      function checkScrollPosition() {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        elements.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+
+          if (top < triggerBottom) {
+            el.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkScrollPosition);
+      window.addEventListener("load", checkScrollPosition);
+    });
+  </script>
+
   <body class="bg-dark text-white">
     <header><%- include('./header'); %></header>
 
     <main class="container py-5 text-center">
       <div><%- include('./tabs'); %></div>
 
-      <section class="bg-secondary bg-gradient p-5 rounded shadow mb-5">
+      <section
+        class="bg-secondary bg-gradient p-5 rounded shadow mb-5 scroll-fade-in"
+      >
         <h2 class="mb-4">Develop Your Solutions with Student Team</h2>
         <p>
           Work-life orientation is reflected in our teaching through various
@@ -26,7 +49,7 @@
         </p>
       </section>
 
-      <section class="mb-5">
+      <section class="mb-5 scroll-fade-in">
         <h3 class="mb-3">Propose a Project Topic and Gain</h3>
         <ul class="list-group list-group-flush">
           <li class="list-group-item bg-dark text-white">
@@ -45,10 +68,10 @@
         </ul>
       </section>
 
-      <section class="mb-5">
+      <section class="mb-5 scroll-fade-in">
         <h3 class="mb-3">Project Workflow</h3>
-        <div class="row g-4 text-start">
-          <div class="col-md-6 col-lg-4">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6 col-lg-4 scroll-fade-in">
             <div class="card h-100 bg-dark text-white">
               <div class="card-body">
                 <h5 class="card-title">1. Define the Project Content</h5>
@@ -59,7 +82,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 scroll-fade-in">
             <div class="card h-100 bg-dark text-white">
               <div class="card-body">
                 <h5 class="card-title">2. Get in Touch</h5>
@@ -72,7 +95,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-4 scroll-fade-in">
             <div class="card h-100 bg-dark text-white">
               <div class="card-body">
                 <h5 class="card-title">3. Agree on Implementation</h5>
@@ -82,7 +105,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6">
+          <div class="col-md-6 col-lg-4 scroll-fade-in">
             <div class="card h-100 bg-dark text-white">
               <div class="card-body">
                 <h5 class="card-title">4. Students Execute the Project</h5>
@@ -93,7 +116,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-6">
+          <div class="col-md-6 col-lg-4 scroll-fade-in">
             <div class="card h-100 bg-dark text-white">
               <div class="card-body">
                 <h5 class="card-title">5. Presentation of Results</h5>
@@ -107,11 +130,11 @@
         </div>
       </section>
 
-      <section class="mb-5">
+      <section class="mb-5 scroll-fade-in">
         <h3 class="mb-3">Duration and Timing</h3>
         <ul class="list-group list-group-flush">
           <li class="list-group-item bg-dark text-white">
-            Varies by case, ranging from 1–2 days to an entire semester.
+            Varies by case, ranging from 1-2 days to an entire semester.
           </li>
           <li class="list-group-item bg-dark text-white">
             Project proposals can be submitted year-round.
@@ -126,7 +149,7 @@
         </ul>
       </section>
 
-      <section class="mb-5">
+      <section class="mb-5 scroll-fade-in">
         <h3 class="mb-3">What is Expected from the Client?</h3>
         <ul class="list-group list-group-flush">
           <li class="list-group-item bg-dark text-white">
