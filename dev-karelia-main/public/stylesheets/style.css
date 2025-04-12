@@ -167,10 +167,11 @@ button:active {
 }
 
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #3a3f44;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
