@@ -9,25 +9,56 @@
     <main>
       <div><%- include('./tabs'); %></div>
       <div class="container">
-        <!-- Jumbotron -->
-        <!-- <div class="row bg-image d-flex justify-content-center align-items-center" -->
+        <!-- Hero section -->
         <div
           class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center"
           style="background-image: url('../images/valopuu.png'); height: 50vh"
         >
-          <!--<h1 class="mb-3 h2 animated-text">
-            Improve your skills with Karelia Developer Portal
-          </h1> -->
           <h1 class="mb-3 h3 animated-text">
-            Welcome to the Karelia Developer Portal <br />
-            <br />
+            Welcome to the Karelia Developer Portal <br /><br />
             Platform where you can innovate and create smart campus solutions.
           </h1>
         </div>
-        <!-- Jumbotron -->
-        <div class="row"></div>
+        <div style="margin-top: 50px"></div>
+        <!-- Info section -->
+        <div class="row fade-in">
+          <div class="col-md-10 offset-md-1 text-center">
+            <h2 class="mb-4">What is Karelia Developer Portal?</h2>
+            <p>
+              <strong>Karelia Developer Portal</strong> is part of Karelia UAS’s
+              Smart Campus initiative. This platform brings students, teachers,
+              and partners together by showcasing student-created digital
+              projects in one place.
+            </p>
+
+            <h4 class="mt-4">For Students</h4>
+            <p>
+              Add links to your GitHub repositories on the
+              <strong>Apps, Libs & Repos</strong> page to share your work with
+              others. Discover what your peers are building and let teachers,
+              fellow students, and potential employers see your creations.
+            </p>
+            <p>
+              Want hands-on practice? Register and log in to generate your own
+              <strong>API token</strong> and start experimenting with Karelia’s
+              APIs. Perfect for learning modern web development and software
+              production.
+            </p>
+
+            <h4 class="mt-4">For Organizations</h4>
+            <p>
+              Propose a student project and get real results. You'll gain access
+              to new ideas, research insights, and fresh perspectives, all while
+              providing students with valuable experience and increasing your
+              visibility among future professionals.
+            </p>
+          </div>
+        </div>
+        <!-- End of Info section -->
       </div>
     </main>
+    <!-- space before footer -->
+    <div style="margin-top: 50px"></div>
     <footer><%- include('./footer'); %></footer>
   </body>
 </html>
