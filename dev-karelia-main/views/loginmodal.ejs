@@ -1,0 +1,113 @@
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-white" style="background-color: #111">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form id="login-form" class="row g-3">
+          <div class="col-12">
+            <label for="username" class="form-label">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col-12">
+            <label for="password" class="form-label">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              required
+            />
+            <div class="form-check mt-2">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="show-password"
+                onclick="togglePassword()"
+              />
+              <label class="form-check-label" for="show-password"
+                >Show Password</label
+              >
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="login-button">Log In</button>
+          </div>
+        </form>
+        <div
+          id="response-message"
+          class="alert alert-danger text-center mt-3 p-2"
+          style="display: none"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePassword() {
+    const pw = document.getElementById("password");
+    pw.type = pw.type === "password" ? "text" : "password";
+  }
+
+  document
+    .getElementById("login-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      fetch("/login", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            window.location.href = "/dashboard";
+          } else {
+            const msg = document.getElementById("response-message");
+            msg.innerText = "Invalid username or password.";
+            msg.style.display = "block";
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+</script>
+
+<!-- taustan blur-efekti modaalin avautuessa ja sulkeutuessa -->
+<script>
+  const loginModal = document.getElementById("loginModal");
+  const blurOverlay = document.getElementById("blur-overlay");
+
+  loginModal.addEventListener("show.bs.modal", () => {
+    blurOverlay.classList.add("active");
+  });
+
+  loginModal.addEventListener("hide.bs.modal", () => {
+    blurOverlay.classList.remove("active");
+  });
+</script>
