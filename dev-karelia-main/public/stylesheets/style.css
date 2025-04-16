@@ -177,7 +177,7 @@ button:active {
   border: 1px solid transparent;
 }
 
-.card:hover {
+.card-hover:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
   box-shadow: 0 0 15px lightgreen;
