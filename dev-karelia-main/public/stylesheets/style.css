@@ -172,7 +172,7 @@ button:active {
   font-weight: bold;
   opacity: 0;
   transform: translateY(-20px);
-  animation: fadeInSlideDown 7s ease-out forwards;
+  animation: fadeInSlideDown 2s ease-out forwards;
 }
 
 @keyframes fadeInSlideDown {
@@ -200,7 +200,7 @@ button:active {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 7s ease-out forwards;
+  animation: fadeInUp 2s ease-out forwards;
 }
 
 @keyframes fadeInUp {

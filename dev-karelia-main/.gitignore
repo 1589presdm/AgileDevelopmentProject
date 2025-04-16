@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Estää Visual Studion luoman kansion päätymisen versionhallintaan jatkossa
+.vs/
