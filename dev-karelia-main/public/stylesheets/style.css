@@ -77,6 +77,25 @@ button:active {
   transition: all 0.3s ease-in-out;
 }
 
+/* Yleinen karelia button */
+.btn-karelia {
+  background-color: #1e9e67;
+  color: white;
+  border: 2px solid #1e9e67;
+  border-radius: 8px;
+  padding: 5px 15px;
+  transition: 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-karelia:hover {
+  background-color: #178c58;
+  border-color: #125e3a;
+  cursor: pointer;
+  color: white;
+}
+
 /* login modal(button style) */
 .login-button {
   background-color: #1e9e67;
@@ -172,7 +191,7 @@ button:active {
   font-weight: bold;
   opacity: 0;
   transform: translateY(-20px);
-  animation: fadeInSlideDown 2s ease-out forwards;
+  animation: fadeInSlideDown 0.8s ease-out forwards;
 }
 
 @keyframes fadeInSlideDown {
@@ -200,7 +219,7 @@ button:active {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 2s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 @keyframes fadeInUp {
@@ -219,7 +238,7 @@ button:active {
   opacity: 0;
   font-weight: bold;
   transform: translateY(20px);
-  animation: fadeInSlideDown 7s ease-out forwards;
+  animation: fadeInSlideDown 0.8s ease-out forwards;
 }
 
 /* for organizations -sivun sisällölle efektit */
