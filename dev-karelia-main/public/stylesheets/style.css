@@ -3,15 +3,15 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   background-color: #000000;
-  color: #ffffff;
+  color: #f1f3f5;
 }
 
 .nav-link {
-  color: #ffffff;
+  color: #f1f3f5;
 }
 
 .nav {
-  color: #ffffff;
+  color: #f1f3f5;
   margin-bottom: 30px;
 }
 
@@ -30,7 +30,7 @@ a:active,
 .nav-link:link,
 .nav-link:visited,
 .nav-link:active {
-  color: #ffffff;
+  color: #f1f3f5;
   text-decoration: none;
 }
 
@@ -46,11 +46,11 @@ a:hover,
 }
 
 h1 {
-  color: #ffffff;
+  color: #f1f3f5;
 }
 
 p {
-  color: #ffffff;
+  color: #f1f3f5;
 }
 
 button {
@@ -80,7 +80,7 @@ button:active {
 /* Yleinen karelia button */
 .btn-karelia {
   background-color: #006b38;
-  color: white;
+  color: #f1f3f5;
   border: 2px solid #006b38;
   border-radius: 8px;
   padding: 5px 15px;
@@ -93,13 +93,13 @@ button:active {
   background-color: #178c58;
   border-color: #125e3a;
   cursor: pointer;
-  color: white;
+  color: #f1f3f5;
 }
 
 /* login modal(button style) */
 .login-button {
   background-color: #1e9e67;
-  color: white;
+  color: #f1f3f5;
   border: 2px solid #1e9e67;
   border-radius: 8px;
   padding: 10px 15px;
@@ -154,7 +154,7 @@ button:active {
 
 .search-button {
   background-color: #006b38;
-  color: white;
+  color: #f1f3f5;
   border: 2px solid #006b38;
   border-radius: 8px;
   padding: 5px 15px;
@@ -172,7 +172,7 @@ button:active {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   background-color: #000000;
-  color: #ffffff;
+  color: #f1f3f5;
   transition: background-color 0.3s ease, border 0.3s ease;
   border: 1px solid transparent;
 }
