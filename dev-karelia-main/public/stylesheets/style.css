@@ -90,17 +90,17 @@ button:active {
 }
 
 .btn-karelia:hover {
-  background-color: #178c58;
-  border-color: #125e3a;
+  background-color: #006b38;
+  border-color: #006b38;
   cursor: pointer;
   color: #f1f3f5;
 }
 
 /* login modal(button style) */
 .login-button {
-  background-color: #1e9e67;
+  background-color: #006b38;
   color: #f1f3f5;
-  border: 2px solid #1e9e67;
+  border: 2px solid #006b38;
   border-radius: 8px;
   padding: 10px 15px;
   width: 100%;
@@ -110,8 +110,8 @@ button:active {
 }
 
 .login-button:hover {
-  background-color: #178c58;
-  border-color: #125e3a;
+  background-color: #006b38;
+  border-color: #006b38;
   cursor: pointer;
   transform: scale(1.02);
 }
@@ -162,8 +162,8 @@ button:active {
 }
 
 .search-button:hover {
-  background-color: #178c58;
-  border-color: #125e3a;
+  background-color: #006b38;
+  border-color: #006b38;
   cursor: pointer;
 }
 
