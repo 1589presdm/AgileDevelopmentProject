@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   background-color: #2d2d32;
   color: #f1f3f5;
 }
@@ -255,4 +255,68 @@ button:active {
 /*Annetaan headerille ja muulle sisällölle tilaa */
 .header-spacing {
   margin-bottom: 80px;
+}
+
+/* Puhekuplan muotoilu painikkeelle */
+.speech-bubble-button {
+  position: fixed; /* Kiinnitetään painike oikeaan reunaan */
+  bottom: 20px; /* Etäisyys sivun alareunasta */
+  right: 20px; /* Etäisyys sivun oikeasta reunasta */
+  background-color: #006b38; /* Painikkeen taustaväri */
+  color: white; /* Tekstin väri */
+  border: none; /* Poistetaan reunaviiva */
+  border-radius: 20px; /* Pyöristetyt kulmat */
+  padding: 10px 20px; /* Sisennykset */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Varjo */
+  font-size: 16px; /* Tekstin koko */
+  cursor: pointer; /* Hiiren osoitin muuttuu painikkeeksi */
+}
+
+/* Puhekuplan kärki */
+.speech-bubble-button::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Kärki painikkeen alapuolelle */
+  right: 20px; /* Kärjen sijainti oikeassa reunassa */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #006b38; /* Kärjen väri sama kuin painikkeen tausta */
+}
+
+/* Hover-efekti */
+.speech-bubble-button:hover {
+  background-color: #006b38; /* Tummempi sininen hover-tilassa */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Korostettu varjo hover-tilassa */
+}
+
+/* Lähetä-painikkeen tyyli */
+button[type="submit"] {
+  background-color: #006b38; /* Vihreä taustaväri */
+  color: whitesmoke; /* Valkoinen teksti */
+  border: none; /* Poistetaan reunaviiva */
+  border-radius: 8px; /* Pyöristetyt kulmat */
+  padding: 10px 20px; /* Sisennykset */
+  font-size: 16px; /* Tekstin koko */
+  cursor: pointer; /* Hiiren osoitin muuttuu painikkeeksi */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Hover-animaatio */
+}
+
+button[type="submit"]:hover {
+  background-color: #00512e; /* Tummempi vihreä hover-tilassa */
+  transform: scale(1.05); /* Pieni suurennus hover-tilassa */
+}
+
+button[type="submit"]:active {
+  transform: scale(0.95); /* Pieni pienennys klikatessa */
+}
+
+/* Palautelaatikon taustaväri */
+.modal-content {
+  background-color: #2d2d32; /* Vaaleanharmaa taustaväri */
+  color: whitesmoke; /* Tumma teksti */
+  border-radius: 10px; /* Pyöristetyt kulmat */
+  padding: 20px; /* Sisennykset */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Varjo */
 }
