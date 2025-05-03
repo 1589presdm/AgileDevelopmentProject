@@ -259,7 +259,7 @@ button:active {
 
 /* Puhekuplan muotoilu painikkeelle */
 .speech-bubble-button {
-  position: fixed; /* Kiinnitetään painike oikeaan reunaan */
+  position: fixed; /*  painike oikeassa reunassa */
   bottom: 20px; /* Etäisyys sivun alareunasta */
   right: 20px; /* Etäisyys sivun oikeasta reunasta */
   background-color: #006b38; /* Painikkeen taustaväri */
@@ -276,18 +276,18 @@ button:active {
 .speech-bubble-button::after {
   content: "";
   position: absolute;
-  bottom: -10px; /* Kärki painikkeen alapuolelle */
-  right: 20px; /* Kärjen sijainti oikeassa reunassa */
+  bottom: -10px; /* painikkeen alapuoli */
+  right: 20px; /* sijainti oikealla */
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #006b38; /* Kärjen väri sama kuin painikkeen tausta */
+  border-top: 10px solid #006b38; /* Värin yhtenäistämistä */
 }
 
 /* Hover-efekti */
 .speech-bubble-button:hover {
-  background-color: #006b38; /* Tummempi sininen hover-tilassa */
+  background-color: #006b38; /* vihreä hover-tilassa */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Korostettu varjo hover-tilassa */
 }
 
@@ -315,7 +315,7 @@ button[type="submit"]:active {
 /* Palautelaatikon taustaväri */
 .modal-content {
   background-color: #2d2d32; /* Vaaleanharmaa taustaväri */
-  color: whitesmoke; /* Tumma teksti */
+  color: whitesmoke; /* vaalea teksti */
   border-radius: 10px; /* Pyöristetyt kulmat */
   padding: 20px; /* Sisennykset */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Varjo */
