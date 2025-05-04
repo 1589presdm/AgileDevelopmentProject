@@ -11,7 +11,8 @@
       <div><%- include('./tabs'); %></div>
 
       <!-- hakupalkki -->
-      <div class="search-wrapper">
+      <div class="search-wrapper align-items-center">
+        <span id="toggleAdvancedSearch" class="burger-icon me-2">&#9881;</span>
         <input
           type="text"
           id="searchInput"
@@ -21,11 +22,44 @@
         <button id="searchButton" class="search-button">Search</button>
       </div>
 
+      <div id="advancedSearchOptions" style="display: none;" class="text-center mt-4">
+
+          <!-- kirjainsuodatus (suodata ensimmäisen kirjaimen mukaan) -->
+          <h6 class="text-light mb-2">Filter by First Letter</h6>
+          <div class="letter-filter text-center my-3">
+            <button class="btn btn-sm btn-outline-light mx-1 letter-btn" data-letter="All">All</button>
+             <script>
+              const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+              document.write(
+              letters.map(l => `<button class="btn btn-sm btn-outline-light mx-1 letter-btn" data-letter="${l}">${l}</button>`).join("")
+              );
+              </script>
+          </div>
+    
+          <!-- kategoriat  -->
+          <h6 class="text-light mb-2">Filter by Category</h6>
+          <div class="filter-buttons text-center mb-4">
+            <button class="btn btn-outline-light category-filter" data-filter="all">All</button>
+            <button class="btn btn-outline-light category-filter" data-filter="application">Applications</button>
+            <button class="btn btn-outline-light category-filter" data-filter="library">Libraries</button>
+            <button class="btn btn-outline-light category-filter" data-filter="repo">Repositories</button>
+          </div>
+    
+           <!-- tag-suodatus -->
+           <h6 class="text-light mb-2">Filter by Tags</h6>
+           <div class="tag-filter-group text-center mb-4">
+            <button class="btn btn-outline-light tag-btn" data-tag="IoT">IoT</button>
+            <button class="btn btn-outline-light tag-btn" data-tag="Thesis">Thesis</button>
+            <button class="btn btn-outline-light tag-btn" data-tag="Open Source">Open Source</button>
+          </div></div>
+
+      </div>
+     
       <!-- kortit yhdessä rivissä -->
       <div class="container">
         <div class="row justify-content-center g-4">
           <!-- kortti 1 -->
-          <div class="col-md-3">
+          <div class="col-md-3" data-category="repo">
             <div class="card card-hover text-center">
               <img
                 class="card-img-top mx-auto d-block mt-3"
@@ -36,6 +70,10 @@
               <div class="card-body">
                 <h5 class="card-title">Dev Karelia</h5>
                 <p class="card-text">Repository for this website.</p>
+                <div class="card-tags">
+                  <span class="badge bg-secondary tag">Open Source</span>
+                </div>
+                <div class="mb-2"></div>
                 <a
                   href="https://github.com/Karelia-University-of-Applied-Sciences/dev-karelia"
                   class="btn btn-karelia"
@@ -46,7 +84,7 @@
           </div>
 
           <!-- kortti 2 -->
-          <div class="col-md-3">
+          <div class="col-md-3" data-category="library">
             <div class="card card-hover text-center">
               <img
                 class="card-img-top mx-auto d-block mt-3"
@@ -57,13 +95,17 @@
               <div class="card-body">
                 <h5 class="card-title">Karelia Campus</h5>
                 <p class="card-text">Karelia building models.</p>
+                <div class="card-tags">
+                  <span class="badge bg-secondary tag">Thesis</span>
+                </div>
+                <div class="mb-2"></div>
                 <a href="#" class="btn btn-karelia">Repository</a>
               </div>
             </div>
           </div>
 
           <!-- kortti 3 -->
-          <div class="col-md-3">
+          <div class="col-md-3" data-category="application">
             <div class="card card-hover text-center">
               <img
                 class="card-img-top mx-auto d-block mt-3"
@@ -76,6 +118,11 @@
                 <p class="card-text">
                   Zigbee demonstration project and thesis.
                 </p>
+                <div class="card-tags">
+                  <span class="badge bg-secondary tag">IoT</span>
+                  <span class="badge bg-secondary tag">Thesis</span>
+                </div>
+                <div class="mb-2"></div>
                 <a
                   href="https://github.com/Karelia-University-of-Applied-Sciences/zigbee-tutorial"
                   class="btn btn-karelia"
@@ -88,34 +135,152 @@
       </div>
     </main>
     <div style="margin-top: 150px"></div>
-
     <footer><%- include('./footer'); %></footer>
 
-    <!-- hakulogiikka, suodattaa kortteja otsikon perusteella -->
-    <script>
-      document
-        .getElementById("searchButton")
-        .addEventListener("click", function () {
-          const query = document
-            .getElementById("searchInput")
-            .value.toLowerCase();
-          const cards = document.querySelectorAll(".card");
+ <!-- hakulogiikka, suodattaa kortteja otsikon perusteella -->
+<!-- <script>
+  document
+    .getElementById("searchButton")
+    .addEventListener("click", function () {
+      const query = document
+        .getElementById("searchInput")
+        .value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
 
-          cards.forEach((card) => {
-            const title = card
-              .querySelector(".card-title")
-              .textContent.toLowerCase();
-            const description = card
-              .querySelector(".card-text")
-              .textContent.toLowerCase();
+      cards.forEach((card) => {
+        const title = card
+          .querySelector(".card-title")
+          .textContent.toLowerCase();
+        const description = card
+          .querySelector(".card-text")
+          .textContent.toLowerCase();
 
-            if (title.includes(query) || description.includes(query)) {
-              card.parentElement.style.display = "block";
-            } else {
-              card.parentElement.style.display = "none";
-            }
-          });
-        });
-    </script>
-  </body>
+        if (title.includes(query) || description.includes(query)) {
+          card.parentElement.style.display = "block";
+        } else {
+          card.parentElement.style.display = "none";
+        }
+      });
+    });
+</script> -->
+
+<!-- live search testivaiheessa -->
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+
+    cards.forEach((card) => {
+      const title = card.querySelector(".card-title");
+      const description = card.querySelector(".card-text");
+
+      const titleText = title.textContent;
+      const descText = description.textContent;
+
+      const titleLower = titleText.toLowerCase();
+      const descLower = descText.toLowerCase();
+
+      if (titleLower.includes(query) || descLower.includes(query)) {
+        card.parentElement.style.display = "block";
+
+        if (query.length > 0) {
+          title.innerHTML = titleText.replace(
+            new RegExp(`(${query})`, "gi"),
+            "<strong>$1</strong>"
+          );
+          description.innerHTML = descText.replace(
+            new RegExp(`(${query})`, "gi"),
+            "<strong>$1</strong>"
+          );
+        } else {
+          title.innerHTML = titleText;
+          description.innerHTML = descText;
+        }
+      } else {
+        card.parentElement.style.display = "none";
+      }
+    });
+  });
+</script>
+
+<!-- tag-suodatus logiikka -->
+<script>
+  const tagButtons = document.querySelectorAll(".tag-btn");
+  tagButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const selectedTag = button.getAttribute("data-tag");
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+        const tags = Array.from(card.querySelectorAll(".tag"))
+          .map(tag => tag.textContent);
+
+        if (selectedTag === "All" || tags.includes(selectedTag)) {
+          card.parentElement.style.display = "block";
+        } else {
+          card.parentElement.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<!-- suodatus otsikon ensimmäisen kirjaimen perusteella -->
+<script>
+  const letterButtons = document.querySelectorAll('.letter-btn');
+
+  letterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedLetter = button.getAttribute('data-letter');
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.trim().toUpperCase();
+
+        if (selectedLetter === "All" || title.startsWith(selectedLetter)) {
+          card.parentElement.style.display = "block";
+        } else {
+          card.parentElement.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<!-- kategoriasuodatus -->
+<script>
+  const categoryButtons = document.querySelectorAll(".category-filter");
+
+  categoryButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const selected = button.getAttribute("data-filter");
+      const cards = document.querySelectorAll(".col-md-3");
+
+      cards.forEach(card => {
+        const category = card.getAttribute("data-category");
+        if (selected === "all" || category === selected) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<!-- tarkennettu hakupaneeli -->
+<script>
+  document.getElementById("toggleAdvancedSearch").addEventListener("click", function () {
+    const panel = document.getElementById("advancedSearchOptions");
+    if (panel.style.display === "none") {
+      panel.style.display = "block";
+    } else {
+      panel.style.display = "none";
+    }
+  });
+</script>
+
+</body>
 </html>

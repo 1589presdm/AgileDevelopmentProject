@@ -136,7 +136,7 @@ button:active {
   pointer-events: auto;
 }
 
-/* search component */
+/*  HAKUKOMPONENTIT */
 .search-wrapper {
   max-width: 800px;
   margin: 0 auto 40px;
@@ -167,6 +167,31 @@ button:active {
   cursor: pointer;
 }
 
+.btn-outline-light:hover,
+.letter-btn:hover,
+.category-filter:hover,
+.tag-filter:hover {
+  background-color: #006b38;
+  color: #ffffff;
+  border-color: #ffffff;
+} 
+
+/* laajennetun haun kuvake */
+.burger-icon {
+  font-size: 25px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+  color: #ffffff;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.burger-icon:hover {
+  background-color: #006b38;
+}
+
 /* cards */
 .card {
   font-family: "Poppins", sans-serif;
@@ -184,6 +209,20 @@ button:active {
   background-color: #3a3f44;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+/* projektikorttien tag-tyyli */
+.project-tag {
+  display: inline-block;
+  background-color: #ccc;
+  color: #333;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
 
 /*animaatio Getting started otsikolle */
 .animated-title {
@@ -320,3 +359,4 @@ button[type="submit"]:active {
   padding: 20px; /* Sisennykset */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Varjo */
 }
+
