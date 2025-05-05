@@ -12,50 +12,48 @@
 
       <div class="container mt-4">
         <div class="row g-4 justify-content-center">
-          <!-- kortti 5 -->
+          <% if (isLoggedIn) { %>
           <div class="col-md-3">
-            <div class="card card-hover text-center">
+            <div
+              class="card card-hover text-center h-100 d-flex justify-content-center align-items-center"
+            >
+              <div class="card-body">
+                <h5 class="card-title">Lisää uusi API</h5>
+                <p class="card-text">Luo uusi rajapintatietue.</p>
+                <a href="/dashboard" class="btn btn-karelia">+ Lisää</a>
+              </div>
+            </div>
+          </div>
+          <% } %> <% if (apis && apis.length > 0) { %> <% apis.forEach(api => {
+          %>
+          <div class="col-md-3">
+            <div class="card card-hover text-center h-100">
               <img
                 class="card-img-top mx-auto d-block mt-3"
-                src="../images/openapi-stack-logo.png"
+                src="<%= api.image %>"
                 style="width: 120px; height: 120px"
                 alt="Card image cap"
               />
               <div class="card-body">
-                <h5 class="card-title">Campus API</h5>
-                <p class="card-text">
-                  Karelia Campus OpenAPI 3 for developing smart campus
-                  solutions.
-                </p>
+                <h5 class="card-title"><%= api.name %></h5>
+                <p class="card-text"><%= api.description %></p>
                 <a
-                  href="https://campus-openapi.azurewebsites.net/doc/"
+                  href="<%= api.link %>"
                   class="btn btn-karelia"
-                  >API specs</a
+                  target="_blank"
                 >
+                  API specs
+                </a>
               </div>
             </div>
           </div>
-          <!-- Kortti 2 -->
-          <div class="col-md-3">
-            <div class="card card-hover text-center">
-              <img
-                class="card-img-top mx-auto d-block mt-3"
-                src="../images/asyncapi-logo.png"
-                style="width: 120px; height: 120px"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Campus API</h5>
-                <p class="card-text">
-                  Karelia Campus AsyncAPI for developing smart campus solutions.
-                </p>
-                <a href="#" class="btn btn-karelia">API specs</a>
-              </div>
-            </div>
-          </div>
+          <% }); %> <% } else { %>
+          <p class="text-center">Ei API-tietoja saatavilla.</p>
+          <% } %>
         </div>
       </div>
     </main>
+
     <div style="margin-top: 150px"></div>
 
     <footer><%- include('./footer'); %></footer>
