@@ -1,8 +1,6 @@
 var express = require("express");
 var router = express.Router();
 const { addApi } = require("./db");
-const multer = require("multer");
-const upload = multer({ dest: "public/uploads/" });
 
 // Check if the user is logged in.
 const isAuthenticated = (req, res, next) => {
@@ -28,22 +26,15 @@ router.get("/", isAuthenticated, (req, res) => {
 });
 
 // POST: Lisää uusi API-tietue
-router.post(
-  "/add",
-  isAuthenticated,
-  upload.single("image"),
-  async (req, res) => {
-    const { name, description, link } = req.body;
-    const image = `/uploads/${req.file.filename}`;
+router.post("/add", async (req, res) => {
+  const { name, description, link, image } = req.body;
 
-    try {
-      await addApi({ name, description, link, image });
-      res.redirect("/apis");
-    } catch (error) {
-      console.error("Virhe API:n lisäyksessä:", error);
-      res.status(500).send("API:n lisääminen epäonnistui.");
-    }
+  try {
+    await addApi({ name, description, link, image });
+    res.redirect("/apis"); // onnistumisen jälkeen siirrytään katsomaan API-listaa
+  } catch (error) {
+    res.status(500).send("API:n lisääminen epäonnistui.");
   }
-);
+});
 
 module.exports = router;

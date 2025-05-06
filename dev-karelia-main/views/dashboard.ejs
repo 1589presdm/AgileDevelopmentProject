@@ -110,11 +110,7 @@
                 aria-label="Sulje"
               ></button>
             </div>
-            <form
-              action="/dashboard/add"
-              method="POST"
-              enctype="multipart/form-data"
-            >
+            <form action="/dashboard/add" method="POST">
               <div class="modal-body">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nimi</label>
@@ -147,13 +143,12 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="image" class="form-label">Kuvan tiedosto</label>
+                  <label for="image" class="form-label">Kuvan URL</label>
                   <input
-                    type="file"
+                    type="text"
                     class="form-control"
                     id="image"
                     name="image"
-                    accept="image/*"
                     required
                   />
                 </div>
