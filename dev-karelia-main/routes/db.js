@@ -11,6 +11,7 @@ const databaseid = databaseId;
 const containerid = userContainerId;
 const container = client.database(databaseid).container(containerid);
 const apisContainer = client.database(databaseId).container("KareliaAPIs");
+const { v4: uuidv4 } = require("uuid");
 
 module.exports.getUserByUsername = async (username) => {
   try {
@@ -81,6 +82,25 @@ module.exports.getAllApis = async () => {
     return resources;
   } catch (error) {
     console.log("Virhe haettaessa API-tietoja: ", error);
+    throw error;
+  }
+};
+
+module.exports.addApi = async ({ name, description, link, image }) => {
+  const newApi = {
+    id: uuidv4(),
+    name,
+    description,
+    link,
+    image,
+    timestamp: new Date().toISOString(),
+  };
+
+  try {
+    await apisContainer.items.create(newApi);
+    console.log("Uusi API tallennettu onnistuneesti.");
+  } catch (error) {
+    console.error("Virhe API:n lisäämisessä:", error);
     throw error;
   }
 };

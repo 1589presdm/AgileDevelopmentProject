@@ -10,22 +10,19 @@
     <main>
       <div><%- include('./tabs'); %></div>
 
+      <!-- hakupalkki -->
+      <div class="search-wrapper align-items-center mb-4">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search APIs..."
+        />
+      </div>
+
       <div class="container mt-4">
         <div class="row g-4 justify-content-center">
-          <% if (isLoggedIn) { %>
-          <div class="col-md-3">
-            <div
-              class="card card-hover text-center h-100 d-flex justify-content-center align-items-center"
-            >
-              <div class="card-body">
-                <h5 class="card-title">Lisää uusi API</h5>
-                <p class="card-text">Uuden rajapintatietue luonti.</p>
-                <a href="/dashboard" class="btn btn-karelia">+ Lisää</a>
-              </div>
-            </div>
-          </div>
-          <% } %> <% if (apis && apis.length > 0) { %> <% apis.forEach(api => {
-          %>
+          <% if (apis && apis.length > 0) { %> <% apis.forEach(api => { %>
           <div class="col-md-3">
             <div class="card card-hover text-center h-100">
               <img
@@ -53,6 +50,22 @@
         </div>
       </div>
     </main>
+
+    <script>
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function () {
+          const query = this.value.toLowerCase().trim();
+          const cards = document.querySelectorAll(".card");
+
+          cards.forEach((card) => {
+            const text = card.innerText.toLowerCase();
+            card.parentElement.style.display = text.includes(query)
+              ? ""
+              : "none";
+          });
+        });
+    </script>
 
     <div style="margin-top: 150px"></div>
 
