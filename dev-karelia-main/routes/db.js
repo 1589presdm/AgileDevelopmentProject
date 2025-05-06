@@ -98,9 +98,9 @@ module.exports.addApi = async ({ name, description, link, image }) => {
 
   try {
     await apisContainer.items.create(newApi);
-    console.log("Uusi API tallennettu onnistuneesti.");
+    console.log("Uusi API lisätty onnistuneesti.");
   } catch (error) {
-    console.error("Virhe API:n lisäämisessä:", error);
+    console.error("Virhe lisättäessä APIa:", error);
     throw error;
   }
 };
