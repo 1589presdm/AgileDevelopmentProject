@@ -55,82 +55,35 @@
 
       </div>
      
-      <!-- kortit yhdessä rivissä -->
-      <div class="container">
-        <div class="row justify-content-center g-4">
-          <!-- kortti 1 -->
-          <div class="col-md-3" data-category="repo">
-            <div class="card card-hover text-center">
-              <img
-                class="card-img-top mx-auto d-block mt-3"
-                src="../images/git-white-simple.png"
-                style="width: 120px; height: 120px"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dev Karelia</h5>
-                <p class="card-text">Repository for this website.</p>
-                <div class="card-tags">
-                  <span class="badge bg-secondary tag">Open Source</span>
+      <div class="container mt-4">
+        <div class="row g-4 justify-content-center">
+          <% if (artifacts && artifacts.length > 0) { %>
+            <% artifacts.forEach(artifact => { %>
+              <div class="col-md-3" data-category="application">
+                <div class="card card-hover text-center h-100">
+                  <img
+                    class="card-img-top mx-auto d-block mt-3"
+                    src="<%= artifact.image %>"
+                    style="width: 120px; height: 120px"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title"><%= artifact.name %></h5>
+                    <p class="card-text"><%= artifact.description %></p>
+                    <a
+                      href="<%= artifact.link %>"
+                      class="btn btn-karelia"
+                      target="_blank"
+                    >
+                      Repository
+                    </a>
+                  </div>
                 </div>
-                <div class="mb-2"></div>
-                <a
-                  href="https://github.com/Karelia-University-of-Applied-Sciences/dev-karelia"
-                  class="btn btn-karelia"
-                  >Repository</a
-                >
               </div>
-            </div>
-          </div>
-
-          <!-- kortti 2 -->
-          <div class="col-md-3" data-category="library">
-            <div class="card card-hover text-center">
-              <img
-                class="card-img-top mx-auto d-block mt-3"
-                src="../images/git-white-simple.png"
-                style="width: 120px; height: 120px"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Karelia Campus</h5>
-                <p class="card-text">Karelia building models.</p>
-                <div class="card-tags">
-                  <span class="badge bg-secondary tag">Thesis</span>
-                </div>
-                <div class="mb-2"></div>
-                <a href="#" class="btn btn-karelia">Repository</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- kortti 3 -->
-          <div class="col-md-3" data-category="application">
-            <div class="card card-hover text-center">
-              <img
-                class="card-img-top mx-auto d-block mt-3"
-                src="../images/git-white-simple.png"
-                style="width: 120px; height: 120px"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Zigbee demo</h5>
-                <p class="card-text">
-                  Zigbee demonstration project and thesis.
-                </p>
-                <div class="card-tags">
-                  <span class="badge bg-secondary tag">IoT</span>
-                  <span class="badge bg-secondary tag">Thesis</span>
-                </div>
-                <div class="mb-2"></div>
-                <a
-                  href="https://github.com/Karelia-University-of-Applied-Sciences/zigbee-tutorial"
-                  class="btn btn-karelia"
-                  >Repository</a
-                >
-              </div>
-            </div>
-          </div>
+            <% }); %>
+          <% } else { %>
+            <p class="text-center text-light">Ei tietoja saatavilla.</p>
+          <% } %>
         </div>
       </div>
     </main>

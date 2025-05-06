@@ -67,7 +67,14 @@
               <div class="card-body">
                 <h5 class="card-title">Lisää uusi APP</h5>
                 <p class="card-text">Uuden apps,libs & repos luonti.</p>
-                <a href="/dashboard" class="btn btn-karelia">+ Lisää</a>
+                <button
+                  type="button"
+                  class="btn btn-karelia"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addAppModal"
+                >
+                  + Lisää
+                </button>
               </div>
             </div>
           </div>
@@ -160,6 +167,69 @@
           </div>
         </div>
       </div>
+
+      <!-- modaalilomake/lisää uusi APP -->
+      <div
+        class="modal fade"
+        id="addAppModal"
+        tabindex="-1"
+        aria-labelledby="addAppModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-white" style="background-color: #111">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="addAppModalLabel">Lisää uusi APP</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Sulje"
+              ></button>
+            </div>
+            <form action="/dashboard/addApp" method="POST">
+              <div class="modal-body">
+                <!-- kentät APP:lle -->
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nimi</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="description" class="form-label">Kuvaus</label>
+                  <textarea
+                    class="form-control"
+                    name="description"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="link" class="form-label">Linkki</label>
+                  <input type="url" class="form-control" name="link" required />
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Kuvan URL</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="image"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="modal-footer border-0">
+                <button type="submit" class="btn btn-karelia">Tallenna</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <!-- Taustasumennus -->
       <div id="blur-overlay"></div>
       <script>

@@ -11,6 +11,9 @@ const databaseid = databaseId;
 const containerid = userContainerId;
 const container = client.database(databaseid).container(containerid);
 const apisContainer = client.database(databaseId).container("KareliaAPIs");
+const artifactsContainer = client
+  .database(databaseId)
+  .container("appsLibsRepos");
 const { v4: uuidv4 } = require("uuid");
 
 module.exports.getUserByUsername = async (username) => {
@@ -86,6 +89,22 @@ module.exports.getAllApis = async () => {
   }
 };
 
+//hakee kaikki artifakteja
+module.exports.getAllArtifacts = async () => {
+  try {
+    const querySpec = {
+      query: "SELECT * FROM c ORDER BY c.timestamp DESC",
+    };
+    const { resources } = await artifactsContainer.items
+      .query(querySpec)
+      .fetchAll();
+    return resources;
+  } catch (error) {
+    console.error("Virhe haettaessa artifact-tietoja:", error);
+    throw error;
+  }
+};
+
 module.exports.addApi = async ({ name, description, link, image }) => {
   const newApi = {
     id: uuidv4(),
@@ -101,6 +120,26 @@ module.exports.addApi = async ({ name, description, link, image }) => {
     console.log("Uusi API lisätty onnistuneesti.");
   } catch (error) {
     console.error("Virhe lisättäessä APIa:", error);
+    throw error;
+  }
+};
+
+//lisää uudet artifaktit tietokantaan
+module.exports.addArtifact = async ({ name, description, link, image }) => {
+  const newArtifact = {
+    id: uuidv4(),
+    name,
+    description,
+    link,
+    image,
+    timestamp: new Date().toISOString(),
+  };
+
+  try {
+    await artifactsContainer.items.create(newArtifact);
+    console.log("Artifakti lisätty onnistuneesti.");
+  } catch (error) {
+    console.error("Virhe lisättäessä artifaktia:", error);
     throw error;
   }
 };

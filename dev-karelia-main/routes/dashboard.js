@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const { addApi } = require("./db");
+const { addApi, addArtifact } = require("./db");
 
 // Check if the user is logged in.
 const isAuthenticated = (req, res, next) => {
@@ -36,5 +36,19 @@ router.post("/add", async (req, res) => {
     res.status(500).send("API:n lisääminen epäonnistui.");
   }
 });
+
+// POST: lisää uusi App/Repo/Lib
+router.post("/addApp", async (req, res) => {
+  const { name, description, link, image } = req.body;
+
+  try {
+    await addArtifact({ name, description, link, image });
+    res.redirect("/artifacts");
+  } catch (error) {
+    console.error("Virhe lisättäessä artifaktin", error);
+    res.status(500).send("Artifaktin lisääminen epäonnistui.");
+  }
+});
+
 
 module.exports = router;
