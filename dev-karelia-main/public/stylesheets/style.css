@@ -174,7 +174,7 @@ button:active {
   background-color: #006b38;
   color: #ffffff;
   border-color: #ffffff;
-} 
+}
 
 /* laajennetun haun kuvake */
 .burger-icon {
@@ -223,7 +223,6 @@ button:active {
   font-weight: 500;
 }
 
-
 /*animaatio Getting started otsikolle */
 .animated-title {
   font-size: 2.5rem;
@@ -246,7 +245,7 @@ button:active {
 
 /* Smokywhite hehku logolle */
 .logo-glow {
-  box-shadow: 0 0 25px 10px rgb(228, 225, 225);
+  box-shadow: 0 0 15px 10px rgb(228, 225, 225);
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -360,3 +359,22 @@ button[type="submit"]:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Varjo */
 }
 
+/* Header osuuden logon oletuskoko */
+.logo-glow {
+  width: 350px;
+  height: auto; /* Säilyttää kuvasuhteen */
+  max-width: 100%; /* Skaalaa logon  */
+}
+
+/* Skaalautuminen mobiililaitteille */
+@media (max-width: 768px) {
+  .logo-glow {
+    width: 200px; /* Pienempi leveys mobiililaitteilla */
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-glow {
+    width: 150px; /* pienempi leveys pienille näytöille */
+  }
+}
