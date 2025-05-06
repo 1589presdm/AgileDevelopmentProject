@@ -174,7 +174,7 @@ button:active {
   background-color: #006b38;
   color: #ffffff;
   border-color: #ffffff;
-} 
+}
 
 /* laajennetun haun kuvake */
 .burger-icon {
@@ -205,7 +205,7 @@ button:active {
 .card-hover:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
-  box-shadow: 0 0 15px lightgreen;
+  box-shadow: 0 0 15px #006b38;
   background-color: #3a3f44;
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -222,7 +222,6 @@ button:active {
   margin-top: 5px;
   font-weight: 500;
 }
-
 
 /*animaatio Getting started otsikolle */
 .animated-title {
@@ -359,4 +358,3 @@ button[type="submit"]:active {
   padding: 20px; /* Sisennykset */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Varjo */
 }
-
