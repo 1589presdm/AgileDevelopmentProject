@@ -1,7 +1,12 @@
+const i18next = require("i18next");
+const Backend = require("i18next-fs-backend");
+const middleware = require("i18next-http-middleware");
+const path = require("path");
+
 require("dotenv").config();
 var createError = require("http-errors");
 var express = require("express");
-var path = require("path");
+//var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
@@ -17,9 +22,36 @@ var logoutRouter = require("./routes/logout");
 
 var app = express();
 
+i18next
+  .use(Backend)
+  .use(middleware.LanguageDetector)
+  .init({
+    fallbackLng: "en",
+    preload: ["en", "fi"], // lataa molemmat kielet
+    backend: {
+      loadPath: path.join(__dirname, "locales/{{lng}}/index.json"),
+    },
+    detection: {
+      order: ["querystring", "cookie"],
+      caches: ["cookie"],
+    },
+  });
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
+app.use(
+  middleware.handle(i18next, {
+    removeLngFromUrl: false,
+  })
+);
+
+app.use((req, res, next) => {
+  res.locals.t = req.t; // t-funktio näkymiin
+  res.locals.language = req.language; // jos haluat käyttää nykyistä kieltä esim. <%= language %>
+  next();
+});
 
 app.use(logger("dev"));
 app.use(express.json());

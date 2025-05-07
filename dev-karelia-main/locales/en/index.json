@@ -1,0 +1,14 @@
+{
+  "heroTitle": "Welcome to the Karelia Developer Portal",
+  "heroSubtitle": "Platform where you can innovate and create smart campus solutions.",
+
+  "introTitle": "What is the Karelia Developer Portal?",
+  "introBody": "The Karelia Developer Portal is part of <a href='https://www.karelia.fi/2024/06/alykampus-vihrean-siirtyman-osaamiskeskittyma/' target='_blank' rel='noopener noreferrer'><strong>Karelia UAS's Smart Campus initiative.</strong></a> This platform brings students, teachers, and partners together by showcasing student-created digital projects in one place.",
+
+  "studentsTitle": "For Students",
+  "studentsBody1": "Add links to your GitHub repositories on the <a href='/artifacts'><strong>Apps, Libs & Repos</strong></a> page to share your work with others. Discover what your peers are building and let teachers, fellow students, and potential employers see your creations.",
+  "studentsBody2": "Want hands-on practice? Register and log in to generate your own <a href='/gettingstarted'><strong>API token</strong></a> and start experimenting with <a href='/apis'><strong>Karelia's APIs</strong></a>. Perfect for learning modern web development and software production.",
+
+  "orgsTitle": "For Organizations",
+  "orgsBody": "<a href='/partners'><strong>Propose a student project and get real results.</strong></a> You'll gain access to new ideas, research insights, and fresh perspectives, all while providing students with valuable experience and increasing your visibility among future professionals."
+}
