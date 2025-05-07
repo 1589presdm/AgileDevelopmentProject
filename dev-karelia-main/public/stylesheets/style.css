@@ -375,6 +375,21 @@ button[type="submit"]:active {
 
 @media (max-width: 576px) {
   .logo-glow {
-    width: 150px; /* pienempi leveys pienille näytöille */
+    width: 150px; /* pienempi leveys pieSnille näytöille */
   }
+}
+
+.language-switch {
+  padding: 4px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #006b38;
+}
+
+.language-switch:hover {
+  color: #006b38; /* Väri, kun käyttäjä vie hiiren napin päälle */
+}
+
+.language-switch.active {
+  color: #006b38; /* Väri aktiiviselle kielelle */
 }

@@ -15,8 +15,8 @@
           style="background-image: url('../images/valopuu.png'); height: 50vh"
         >
           <h1 class="mb-3 h3 animated-text">
-            Welcome to the Karelia Developer Portal <br /><br />
-            Platform where you can innovate and create smart campus solutions.
+            <%= t('heroTitle') %> <br /><br />
+            <%= t('heroSubtitle') %>
           </h1>
         </div>
         <div style="margin-top: 50px"></div>
@@ -24,48 +24,14 @@
         <div class="row fade-in">
           <div class="col-md-10 offset-md-1 text-center">
             <h2 class="mb-4"><%= t('introTitle') %></h2>
-            <p>
-              The Karelia Developer Portal is part of
-              <a
-                href="https://www.karelia.fi/2024/06/alykampus-vihrean-siirtyman-osaamiskeskittyma/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>Karelia UAS's Smart Campus initiative.</strong>
-              </a>
-              This platform brings students, teachers, and partners together by
-              showcasing student-created digital projects in one place.
-            </p>
+            <p><%- t('introBody') %></p>
 
-            <h4 class="mt-4">For Students</h4>
-            <p>
-              Add links to your GitHub repositories on the
-              <a href="/artifacts"><strong>Apps, Libs & Repos</strong></a> page
-              to share your work with others. Discover what your peers are
-              building and let teachers, fellow students, and potential
-              employers see your creations.
-            </p>
-            <p>
-              Want hands-on practice? Register and log in to generate your own
-              <a href="/gettingstarted"><strong>API token</strong></a>
-              and start experimenting with
-              <a href="/apis"><strong>Karelia's APIs</strong></a
-              >. Perfect for learning modern web development and software
-              production.
-            </p>
+            <h4 class="mt-4"><%= t('studentsTitle') %></h4>
+            <p><%- t('studentsBody1') %></p>
+            <p><%- t('studentsBody2') %></p>
 
-            <h4 class="mt-4">For Organizations</h4>
-            <p>
-              <a href="/partners"
-                ><strong
-                  >Propose a student project and get real results.</strong
-                ></a
-              >
-              You'll gain access to new ideas, research insights, and fresh
-              perspectives, all while providing students with valuable
-              experience and increasing your visibility among future
-              professionals.
-            </p>
+            <h4 class="mt-4"><%= t('orgsTitle') %></h4>
+            <p><%- t('studentsBody2') %></p>
           </div>
         </div>
         <!-- End of Info section -->
