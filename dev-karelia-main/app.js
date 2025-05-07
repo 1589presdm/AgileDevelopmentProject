@@ -49,7 +49,7 @@ app.use(
 
 app.use((req, res, next) => {
   res.locals.t = req.t; // t-funktio näkymiin
-  res.locals.language = req.language; // jos haluat käyttää nykyistä kieltä esim. <%= language %>
+  res.locals.language = req.language;
   next();
 });
 
