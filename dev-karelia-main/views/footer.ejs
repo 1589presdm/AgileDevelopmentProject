@@ -56,6 +56,39 @@
   <p class="text-center text-white mt-3 mb-0">
     © Karelia University of Applied Sciences 2025
   </p>
+  <!-- Ota yhteyttä kupla, toistuvuuden vuoksi nyt footerissa-->
+  <button class="btn btn-primary feedback-button speech-bubble-button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+    Ota yhteyttä
+  </button>
+
+  <!-- Modaalilomake -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="feedbackModalLabel">Ota yhteyttä</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/submit-feedback" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nimi</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Kirjoita nimesi">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Sähköposti</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Kirjoita sähköpostiosoitteesi">
+            </div>
+            <div class="mb-3">
+              <label for="feedback" class="form-label">Asia jota yhteydenottopyyntö koskee</label>
+              <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="Kerro lyhyesti"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Lähetä</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- lisätty kirjautumismodaali kaikkiin sivuihin -->
