@@ -393,3 +393,7 @@ button[type="submit"]:active {
 .language-switch.active {
   color: #006b38; /* Väri aktiiviselle kielelle */
 }
+
+.allow-linebreaks {
+  white-space: normal;
+}

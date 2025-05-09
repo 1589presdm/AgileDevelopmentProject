@@ -5,7 +5,7 @@ var router = express.Router();
 router.get("/", function (req, res, next) {
   res.render("gettingstarted", {
     title: "Getting started with Karelia API's.",
-    isLoggedIn: req.session.user ? true : false
+    isLoggedIn: req.session.user ? true : false,
   });
 });
 
