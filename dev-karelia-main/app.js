@@ -6,7 +6,6 @@ const path = require("path");
 require("dotenv").config();
 var createError = require("http-errors");
 var express = require("express");
-//var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
@@ -27,19 +26,17 @@ i18next
   .use(middleware.LanguageDetector)
   .init({
     fallbackLng: "en",
-    preload: ["en", "fi"], // lataa molemmat kielet
+    preload: ["en", "fi"],
+    ns: ["index", "partners", "gettingstarted"],
+    defaultNS: "index",
     backend: {
-      loadPath: path.join(__dirname, "locales/{{lng}}/index.json"),
+      loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
     },
     detection: {
       order: ["querystring", "cookie"],
       caches: ["cookie"],
     },
   });
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "ejs");
 
 app.use(
   middleware.handle(i18next, {
@@ -49,9 +46,13 @@ app.use(
 
 app.use((req, res, next) => {
   res.locals.t = req.t; // t-funktio näkymiin
-  res.locals.language = req.language;
+  res.locals.lng = req.lng;
   next();
 });
+
+// view engine setup
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 app.use(logger("dev"));
 app.use(express.json());

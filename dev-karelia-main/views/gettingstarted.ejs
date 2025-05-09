@@ -32,7 +32,7 @@
 
       <!--animoidun otsikon lisääminen-->
       <div class="text-center my-5">
-        <h1 class="animated-title">Getting Started</h1>
+        <h1 class="animated-title"><%= t('gettingstarted:gettingStartedTitle') %></h1>
       </div>
       <!--Luodaan getting started rakenne ja lisätään numerokuvat-->
       
@@ -41,8 +41,8 @@
           <div class="d-flex align-items-center justify-content-center  mb-3 fade-in">
             <img src="/images/nro1.png" alt="Image 1" class="me-3" style="width: 80px; height: 80px;">
             <div class="text-center">
-              <h5>Access the Karelia APIs</h5>
-              <p>Get your API token by using the <br>credentials given by your lecturer.</p>
+              <h5><%= t('gettingstarted:step1Title') %></h5>
+              <p><%- t('gettingstarted:step1Body') %></p> <!--tähän pitäisi saada rivinvaihto-->
             </div>
           </div> 
           <div class="row justify-content-center">
@@ -50,8 +50,8 @@
               <div class="d-flex align-items-center justify-content-center  mb-3 fade-in">
                 <img src="/images/nro2.png" alt="Image 2" class="me-3" style="width: 80px; height: 80px;">
                 <div class="text-center">
-                  <h5>Log In</h5>
-                  <p>Log in using the credentials you got.</p>
+                  <h5><%= t('gettingstarted:step2Title') %></h5>
+                  <p><%= t('gettingstarted:step1Body') %></p>
                 </div>
               </div> 
               <div class="row justify-content-center">
@@ -59,8 +59,8 @@
                   <div class="d-flex align-items-center justify-content-center  mb-3 fade-in">
                     <img src="/images/nro3.png" alt="Image 3" class="me-3" style="width: 80px; height: 80px;">
                     <div class="text-center">
-                      <h5>Explore</h5>
-                      <p>Now you have access to the dashboard, <br> have fun! </p>
+                      <h5><%= t('gettingstarted:step3Title') %></h5>
+                      <p><%= t('gettingstarted:step3Body') %> </p> <!--tähän pitäisi saada rivinvaihto-->
                     </div>
                   </div> 
                   
