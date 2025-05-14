@@ -16,14 +16,14 @@
   <div class="text-end">
     <div class="lead">
       <% if (isLoggedIn) { %>
-      <a href="/logout" class="nav-link">Log out</a>
+      <a href="/logout" class="nav-link"><%= t('common:navLogout') %></a>
       <% } else { %>
       <a
         href="#"
         class="nav-link"
         data-bs-toggle="modal"
         data-bs-target="#loginModal"
-        >Log In</a
+        ><%= t('common:navLogin') %></a
       >
       <% } %>
 

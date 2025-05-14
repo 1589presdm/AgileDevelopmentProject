@@ -14,10 +14,10 @@
         <div
           class="row bg-image p-5 text-center shadow-1-strong rounded text-white align-items-center"
         >
-          <p class="mb-3 h4">Welcome <%= user %></p>
-          <p>Explore your API key and other features below.</p>
+          <p class="mb-3 h4"><%= t('common:apiWelcome') %> <%= user %></p>
+          <p><%= t('common:apiExplore') %></p>
           <div id="api-key-container" class="mt-2 text-center">
-            <label for="apiKey">API key:</label>
+            <label for="apiKey"><%= t('common:apiKeyLabel') %></label>
 
             <div class="d-flex justify-content-center align-items-center mt-2">
               <input
@@ -32,7 +32,7 @@
                 onclick="copyApiKey(this)"
                 class="btn btn-success"
               >
-                Copy
+                <%= t('common:copy') %>
               </button>
             </div>
           </div>
@@ -41,11 +41,12 @@
             const copyApiKey = (button) => {
               const apiKeyInput = document.getElementById("apiKey");
               const originalText = button.textContent;
+              button.textContent = "<%= t('common:copied') %>";
 
               navigator.clipboard
                 .writeText(apiKeyInput.value)
                 .then(() => {
-                  button.textContent = "Copied!";
+                  button.textContent = "<%= t('common:copied') %>";
                   button.disabled = true;
 
                   setTimeout(() => {
@@ -65,8 +66,8 @@
               class="card card-hover text-center h-100 d-flex justify-content-center align-items-center"
             >
               <div class="card-body">
-                <h5 class="card-title">Lisää uusi APP</h5>
-                <p class="card-text">Uuden apps,libs & repos luonti.</p>
+                <h5 class="card-title"><%= t('common:addAppTitle') %></h5>
+                <p class="card-text"><%= t('common:addAppDesc') %></p>
                 <button
                   type="button"
                   class="btn btn-karelia"
@@ -83,8 +84,8 @@
               class="card card-hover text-center h-100 d-flex justify-content-center align-items-center"
             >
               <div class="card-body">
-                <h5 class="card-title">Lisää uusi API</h5>
-                <p class="card-text">Uuden rajapintatietueen luonti.</p>
+                <h5 class="card-title"><%= t('common:addApiTitle') %></h5>
+                <p class="card-text"><%= t('common:addApiDesc') %></p>
                 <button
                   type="button"
                   class="btn btn-karelia"
@@ -109,7 +110,9 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content text-white" style="background-color: #111">
             <div class="modal-header border-0">
-              <h5 class="modal-title" id="addApiModalLabel">Lisää uusi API</h5>
+              <h5 class="modal-title" id="addApiModalLabel">
+                <%= t('common:addApiTitle') %>
+              </h5>
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -120,7 +123,9 @@
             <form action="/dashboard/add" method="POST">
               <div class="modal-body">
                 <div class="mb-3">
-                  <label for="name" class="form-label">Nimi</label>
+                  <label for="name" class="form-label"
+                    ><%= t('common:nameLabel') %></label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -130,7 +135,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="description" class="form-label">Kuvaus</label>
+                  <label for="description" class="form-label"
+                    ><%= t('common:descriptionLabel') %></label
+                  >
                   <textarea
                     class="form-control"
                     id="description"
@@ -140,7 +147,9 @@
                   ></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="link" class="form-label">Linkki</label>
+                  <label for="link" class="form-label"
+                    ><%= t('common:linkLabel') %></label
+                  >
                   <input
                     type="url"
                     class="form-control"
@@ -150,7 +159,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="image" class="form-label">Kuvan URL</label>
+                  <label for="image" class="form-label"
+                    ><%= t('common:imageLabel') %></label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -161,7 +172,9 @@
                 </div>
               </div>
               <div class="modal-footer border-0">
-                <button type="submit" class="btn btn-karelia">Tallenna</button>
+                <button type="submit" class="btn btn-karelia">
+                  <%= t('common:saveButton') %>
+                </button>
               </div>
             </form>
           </div>
@@ -179,7 +192,9 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content text-white" style="background-color: #111">
             <div class="modal-header border-0">
-              <h5 class="modal-title" id="addAppModalLabel">Lisää uusi APP</h5>
+              <h5 class="modal-title" id="addAppModalLabel">
+                <%= t('common:addAppTitle') %>
+              </h5>
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -191,7 +206,9 @@
               <div class="modal-body">
                 <!-- kentät APP:lle -->
                 <div class="mb-3">
-                  <label for="name" class="form-label">Nimi</label>
+                  <label for="name" class="form-label"
+                    ><%= t('common:nameLabel') %></label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -200,7 +217,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="description" class="form-label">Kuvaus</label>
+                  <label for="description" class="form-label"
+                    ><%= t('common:descriptionLabel') %></label
+                  >
                   <textarea
                     class="form-control"
                     name="description"
@@ -209,11 +228,15 @@
                   ></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="link" class="form-label">Linkki</label>
+                  <label for="link" class="form-label"
+                    ><%= t('common:linkLabel') %></label
+                  >
                   <input type="url" class="form-control" name="link" required />
                 </div>
                 <div class="mb-3">
-                  <label for="image" class="form-label">Kuvan URL</label>
+                  <label for="image" class="form-label"
+                    ><%= t('common:imageLabel') %></label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -223,7 +246,9 @@
                 </div>
               </div>
               <div class="modal-footer border-0">
-                <button type="submit" class="btn btn-karelia">Tallenna</button>
+                <button type="submit" class="btn btn-karelia">
+                  <%= t('common:saveButton') %>
+                </button>
               </div>
             </form>
           </div>

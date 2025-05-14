@@ -7,8 +7,10 @@ const { getUserByUsername, updateUserApiKey } = require("./db");
 
 /* GET login page. */
 router.get("/", function (req, res, next) {
+  const t = req.i18n.getFixedT(req.language, "common"); // gives access to "common" namespace
   res.render("login", {
     title: "Login",
+    t, // t-function
     isLoggedIn: req.session.user ? true : false,
   });
 });
@@ -37,50 +39,46 @@ router.post("/", async function (req, res) {
 
     // Check API key
     if (user.api_key) {
-    
-    try{
+      try {
+        decoded_key = jwt.verify(user.api_key, secretKey);
+        const now = Date.now() / 1000;
 
-      decoded_key = jwt.verify(user.api_key, secretKey);
-      const now = Date.now() / 1000;
-      
-      // If the user's api key is still valid.
-      if (decoded_key.exp >= now) {
+        // If the user's api key is still valid.
+        if (decoded_key.exp >= now) {
+          // Create session and save user and token to session.
+          req.session.user = { username: user.username };
+          req.session.apikey = user.api_key;
+          console.log("Session created: ", req.session.user);
 
-        // Create session and save user and token to session.
-        req.session.user = { username: user.username };
-        req.session.apikey = user.api_key;
-        console.log("Session created: ", req.session.user);
-
-        // Return a successful login.
-        return res.json({
-          success: true,
-          message: "Login successful",
-        });
-      } 
-    } catch (err) {
-      console.error("JWT verification failed:", err.message);
+          // Return a successful login.
+          return res.json({
+            success: true,
+            message: "Login successful",
+          });
+        }
+      } catch (err) {
+        console.error("JWT verification failed:", err.message);
+      }
     }
-  }
-    
-  // Create new token.
-  const token = jwt.sign({ username: user.username }, secretKey, {
-    expiresIn: "8h",
-  });
 
-  // Update user's apikey.
-  await updateUserApiKey(user.username, token);
+    // Create new token.
+    const token = jwt.sign({ username: user.username }, secretKey, {
+      expiresIn: "8h",
+    });
 
-  // Create session and save user and token to session.
-  req.session.user = { username: user.username };
-  req.session.apikey = token;
-  console.log("Session created: " , req.session.user);
+    // Update user's apikey.
+    await updateUserApiKey(user.username, token);
 
-  // Return a successful login.
-  return res.json({
-    success: true,
-    message: "Login successful",
-  });
+    // Create session and save user and token to session.
+    req.session.user = { username: user.username };
+    req.session.apikey = token;
+    console.log("Session created: ", req.session.user);
 
+    // Return a successful login.
+    return res.json({
+      success: true,
+      message: "Login successful",
+    });
   } catch (error) {
     console.error("Login error:", error);
     res.status(500).json({ success: false, message: "Internal Server Error" });

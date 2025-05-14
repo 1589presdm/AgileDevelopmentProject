@@ -18,19 +18,20 @@
             <!-- Login "jumbotron" -->
             <div class="row justify-content-center">
               <div class="col-md-8 text-white p-5 rounded shadow">
-                <p class="h4 text-center mb-4">Log in to get your API key to access the Karelia APIs</p>
+                <p class="h4 text-center mb-4"><%= t('common:loginHeader') %></p>
       
-                <form id="login-form" class="row g-3 justify-content-center">
+                <form id="login-form" data-error="<%= t('loginError') %>" class="row g-3 justify-content-center">
+
                   <div class="col-md-5">
-                    <label for="username" class="form-label">Username:</label>
+                    <label for="username" class="form-label"><%= t('common:usernameLabel') %></label>
                     <input type="text" id="username" name="username" class="form-control" autocomplete="off" required>
                   </div>
                   <div class="col-md-5">
-                    <label for="password" class="form-label">Password:</label>
+                    <label for="password" class="form-label"><%= t('common:passwordLabel') %></label>
                     <input type="password" id="password" name="password" class="form-control" required>
                     <div class = "form-check mt-2 text-start">
                         <input class = "form-check-input" type="checkbox" id = "show-password" onclick = "togglePassword()">
-                        <label class="form-check-label" for="show-password">Show Password</label>
+                        <label class="form-check-label" for="show-password"><%= t('common:showPassword') %></label>
                     </div>
                   </div>
 
@@ -39,7 +40,7 @@
                   </div>
 
                   <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-success mt-3">Get your API key</button>
+                    <button type="submit" class="btn btn-success mt-3"><%= t('common:loginButton') %></button>
                   </div>
                 </form>
       
@@ -71,7 +72,8 @@
                                 else {
                                     // Login fail.
                                     const messageE1 = document.getElementById('response-message');
-                                    messageE1.textContent = 'Invalid username or password.';
+                                    const errorMessage = document.getElementById('login-form').dataset.error;
+                                    messageE1.textContent = errorMessage;
                                     messageE1.style.display = 'block';
                                 }
                             })

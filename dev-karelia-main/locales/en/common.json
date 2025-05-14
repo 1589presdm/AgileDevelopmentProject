@@ -3,10 +3,13 @@
   "searchButton": "Search",
   "searchApis": "Search APIs...",
 
+  "navLogin": "Log in",
+  "navLogout": "Log out",
   "navGettingStarted": "Getting started",
   "navOrganizations": "For Organizations",
   "navArtifacts": "Apps, Libs & Repos",
   "navApis": "Karelia APIs",
+  "navDashboard": "Dashboard",
 
   "footerText": "© Karelia University of Applied Sciences 2025",
   "contactTitle": "Contact us",
@@ -16,5 +19,27 @@
   "formEmailPlaceholder": "Enter your email address",
   "formFeedbackLabel": "Subject of your message",
   "formFeedbackPlaceholder": "Briefly describe your message",
-  "formSubmitButton": "Send"
+  "formSubmitButton": "Send",
+
+  "loginHeader": "Log in to get your API key to access the Karelia APIs",
+  "usernameLabel": "Username:",
+  "passwordLabel": "Password:",
+  "showPassword": "Show Password",
+  "loginButton": "Log in",
+  "loginError": "Invalid username or password.",
+
+  "apiWelcome": "Welcome",
+  "apiExplore": "Explore your API key and other features below.",
+  "apiKeyLabel": "API key:",
+  "copy": "Copy",
+  "copied": "Copied!",
+  "addAppTitle": "Add new APP",
+  "addAppDesc": "Create a new app, library or repository.",
+  "addApiTitle": "Add new API",
+  "addApiDesc": "Create a new API record.",
+  "nameLabel": "Name",
+  "descriptionLabel": "Description",
+  "linkLabel": "Link",
+  "imageLabel": "Image URL",
+  "saveButton": "Save"
 }

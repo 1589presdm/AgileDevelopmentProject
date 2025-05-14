@@ -3,10 +3,13 @@
   "searchButton": "Hae",
   "searchApis": "Hae API-rajapintoja...",
 
+  "navLogin": "Kirjaudu sisään",
+  "navLogout": "Kirjaudu ulos",
   "navGettingStarted": "Aloita käyttö",
   "navOrganizations": "Organisaatioille",
   "navArtifacts": "Apps, Libs & Repos",
   "navApis": "Karelia API:t",
+  "navDashboard": "Dashboard",
 
   "footerText": "© Karelia-ammattikorkeakoulu 2025",
   "contactTitle": "Ota yhteyttä",
@@ -16,5 +19,27 @@
   "formEmailPlaceholder": "Kirjoita sähköpostiosoitteesi",
   "formFeedbackLabel": "Asia, jota yhteydenottopyyntö koskee",
   "formFeedbackPlaceholder": "Kerro lyhyesti",
-  "formSubmitButton": "Lähetä"
+  "formSubmitButton": "Lähetä",
+
+  "loginHeader": "Kirjaudu saadaksesi API-avaimesi Karelia-rajapintoihin",
+  "usernameLabel": "Käyttäjätunnus:",
+  "passwordLabel": "Salasana:",
+  "showPassword": "Näytä salasana",
+  "loginButton": "Kirjaudu sisään",
+  "loginError": "Virheellinen käyttäjätunnus tai salasana.",
+
+  "apiWelcome": "Tervetuloa",
+  "apiExplore": "Tutustu API-avaimeesi ja muihin toimintoihin alla.",
+  "apiKeyLabel": "API-avain:",
+  "copy": "Kopioi",
+  "copied": "Kopioitu!",
+  "addAppTitle": "Lisää uusi APP",
+  "addAppDesc": "Lisää uusi sovellus, kirjasto tai repositorio.",
+  "addApiTitle": "Lisää uusi API",
+  "addApiDesc": "Uuden rajapintatietueen luonti.",
+  "nameLabel": "Nimi",
+  "descriptionLabel": "Kuvaus",
+  "linkLabel": "Linkki",
+  "imageLabel": "Kuvan URL",
+  "saveButton": "Tallenna"
 }
