@@ -8,7 +8,9 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content text-white" style="background-color: #111">
       <div class="modal-header border-0">
-        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+        <h5 class="modal-title" id="loginModalLabel">
+          <%= t('common:navLogin') %>
+        </h5>
         <button
           type="button"
           class="btn-close btn-close-white"
@@ -19,7 +21,9 @@
       <div class="modal-body">
         <form id="login-form" class="row g-3">
           <div class="col-12">
-            <label for="username" class="form-label">Username:</label>
+            <label for="username" class="form-label"
+              ><%= t('common:usernameLabel') %></label
+            >
             <input
               type="text"
               id="username"
@@ -29,7 +33,9 @@
             />
           </div>
           <div class="col-12">
-            <label for="password" class="form-label">Password:</label>
+            <label for="password" class="form-label"
+              ><%= t('common:passwordLabel') %></label
+            >
             <input
               type="password"
               id="password"
@@ -45,12 +51,14 @@
                 onclick="togglePassword()"
               />
               <label class="form-check-label" for="show-password"
-                >Show Password</label
+                ><%= t('common:showPassword') %></label
               >
             </div>
           </div>
           <div class="col-12 text-center">
-            <button type="submit" class="login-button">Log In</button>
+            <button type="submit" class="login-button">
+              <%= t('common:loginButton') %>
+            </button>
           </div>
         </form>
         <div
