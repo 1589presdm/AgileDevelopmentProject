@@ -54,11 +54,12 @@
   </div>
 
   <p class="text-center text-white mt-3 mb-0">
-    © Karelia University of Applied Sciences 2025
+    <%- t('common:footerText') %>
   </p>
+
   <!-- Ota yhteyttä kupla, toistuvuuden vuoksi nyt footerissa-->
   <button class="btn btn-primary feedback-button speech-bubble-button" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-    Ota yhteyttä
+   <%- t('common:contactTitle') %>
   </button>
 
   <!-- Modaalilomake -->
@@ -66,24 +67,24 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="feedbackModalLabel">Ota yhteyttä</h5>
+          <h5 class="modal-title" id="feedbackModalLabel"><%- t('common:contactTitle') %></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form action="/submit-feedback" method="POST">
             <div class="mb-3">
-              <label for="name" class="form-label">Nimi</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Kirjoita nimesi">
+              <label for="name" class="form-label"><%= t('common:formNameLabel') %></label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="<%= t('common:formNamePlaceholder') %>">
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Sähköposti</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Kirjoita sähköpostiosoitteesi">
+              <label for="email" class="form-label"><%= t('common:formEmailLabel') %></label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="<%= t('common:formEmailPlaceholder') %>">
             </div>
             <div class="mb-3">
-              <label for="feedback" class="form-label">Asia jota yhteydenottopyyntö koskee</label>
-              <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="Kerro lyhyesti"></textarea>
+              <label for="feedback" class="form-label"><%= t('common:formFeedbackLabel') %></label>
+              <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="<%= t('common:formFeedbackPlaceholder') %>"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Lähetä</button>
+            <button type="submit" class="btn btn-primary"><%= t('common:formSubmitButton') %></button>
           </form>
         </div>
       </div>

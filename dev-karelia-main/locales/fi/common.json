@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "Hae sovelluksia, kirjastoja tai repositorioita...",
+  "searchButton": "Hae",
+  "searchApis": "Hae API-rajapintoja...",
+
+  "navGettingStarted": "Aloita käyttö",
+  "navOrganizations": "Organisaatioille",
+  "navArtifacts": "Apps, Libs & Repos",
+  "navApis": "Karelia API:t",
+
+  "footerText": "© Karelia-ammattikorkeakoulu 2025",
+  "contactTitle": "Ota yhteyttä",
+  "formNameLabel": "Nimi",
+  "formNamePlaceholder": "Kirjoita nimesi",
+  "formEmailLabel": "Sähköposti",
+  "formEmailPlaceholder": "Kirjoita sähköpostiosoitteesi",
+  "formFeedbackLabel": "Asia, jota yhteydenottopyyntö koskee",
+  "formFeedbackPlaceholder": "Kerro lyhyesti",
+  "formSubmitButton": "Lähetä"
+}

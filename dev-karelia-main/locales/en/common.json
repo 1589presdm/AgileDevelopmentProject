@@ -1,0 +1,20 @@
+{
+  "searchPlaceholder": "Search apps, libraries, or repositories...",
+  "searchButton": "Search",
+  "searchApis": "Search APIs...",
+
+  "navGettingStarted": "Getting started",
+  "navOrganizations": "For Organizations",
+  "navArtifacts": "Apps, Libs & Repos",
+  "navApis": "Karelia APIs",
+
+  "footerText": "© Karelia University of Applied Sciences 2025",
+  "contactTitle": "Contact us",
+  "formNameLabel": "Name",
+  "formNamePlaceholder": "Enter your name",
+  "formEmailLabel": "Email",
+  "formEmailPlaceholder": "Enter your email address",
+  "formFeedbackLabel": "Subject of your message",
+  "formFeedbackPlaceholder": "Briefly describe your message",
+  "formSubmitButton": "Send"
+}

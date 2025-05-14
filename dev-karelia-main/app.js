@@ -27,7 +27,7 @@ i18next
   .init({
     fallbackLng: "en",
     preload: ["en", "fi"],
-    ns: ["index", "partners", "gettingstarted"],
+    ns: ["index", "partners", "gettingstarted", "common"],
     defaultNS: "index",
     backend: {
       loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
