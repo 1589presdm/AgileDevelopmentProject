@@ -11,16 +11,18 @@
       <div><%- include('./tabs'); %></div>
 
       <!-- hakupalkki -->
-      <div class="search-wrapper align-items-center">
-        <span id="toggleAdvancedSearch" class="burger-icon me-2">&#9881;</span>
-        <input
-          type="text"
-          id="searchInput"
-          class="search-input"
-          placeholder="Search apps, libraries, or repositories..."
-        />
-        <button id="searchButton" class="search-button">Search</button>
-      </div>
+<div class="search-wrapper align-items-center">
+  <span id="toggleAdvancedSearch" class="burger-icon me-2">&#9881;</span>
+  <input
+    type="text"
+    id="searchInput"
+    class="search-input"
+    placeholder="<%= t('common:searchPlaceholder') %>"
+  />
+  <button id="searchButton" class="search-button">
+    <%= t('common:searchButton') %>
+  </button>
+</div>
 
       <div id="advancedSearchOptions" style="display: none;" class="text-center mt-4">
 
