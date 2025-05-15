@@ -3,6 +3,8 @@
 <div class="d-flex justify-content-between" style="margin: 50">
   <div class="lead">
     <a href="/"> <i class="fa fa-home"></i></a>
+    <span id="current-date" class="ms-2"></span>
+    <!--päiväys-->
   </div>
   <div class="text-center">
     <a href="/">
@@ -48,3 +50,44 @@
     </div>
   </div>
 </div>
+<!-- Päiväyksen muodostaminen -->
+<script>
+  // Suomi ja englanti päivät ja kuukaudet
+  const days = {
+    fi: [
+      "Sunnuntai",
+      "Maanantai",
+      "Tiistai",
+      "Keskiviikko",
+      "Torstai",
+      "Perjantai",
+      "Lauantai",
+    ],
+    en: [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+  };
+  const months = {
+    fi: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    en: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+  };
+
+  // Valitse kieli
+  const lang = "<%= language %>" || "fi";
+
+  const now = new Date();
+  const dayName = days[lang][now.getDay()];
+  const date = now.getDate();
+  const month = now.getMonth() + 1;
+  const year = now.getFullYear();
+
+  // Muotoile päivämäärä
+  const formatted = `${dayName} ${date}.${month}.${year}`;
+  document.getElementById("current-date").textContent = formatted;
+</script>
