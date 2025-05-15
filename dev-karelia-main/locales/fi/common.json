@@ -3,7 +3,7 @@
   "searchButton": "Hae",
   "searchApis": "Hae API-rajapintoja...",
 
-  "navLogin": "Kirjaudu sisään",
+  "navLogin": "Kirjaudu",
   "navLogout": "Kirjaudu ulos",
   "navGettingStarted": "Aloita käyttö",
   "navOrganizations": "Organisaatioille",
@@ -25,7 +25,7 @@
   "usernameLabel": "Käyttäjätunnus:",
   "passwordLabel": "Salasana:",
   "showPassword": "Näytä salasana",
-  "loginButton": "Kirjaudu sisään",
+  "loginButton": "Kirjaudu",
   "loginError": "Virheellinen käyttäjätunnus tai salasana.",
 
   "apiWelcome": "Tervetuloa",
