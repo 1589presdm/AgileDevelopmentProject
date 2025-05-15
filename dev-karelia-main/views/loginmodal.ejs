@@ -19,7 +19,11 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form id="login-form" class="row g-3">
+        <form
+          id="login-form"
+          class="row g-3"
+          data-error="<%= t('common:loginError') %>"
+        >
           <div class="col-12">
             <label for="username" class="form-label"
               ><%= t('common:usernameLabel') %></label
@@ -96,7 +100,9 @@
             window.location.href = "/dashboard";
           } else {
             const msg = document.getElementById("response-message");
-            msg.innerText = "Invalid username or password.";
+            const errorMsg =
+              document.getElementById("login-form").dataset.error;
+            msg.innerText = errorMsg;
             msg.style.display = "block";
           }
         })
