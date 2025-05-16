@@ -3,7 +3,7 @@
   "searchButton": "Hae",
   "searchApis": "Hae API-rajapintoja...",
 
-  "navLogin": "Kirjaudu",
+  "navLogin": "Kirjaudu sisään",
   "navLogout": "Kirjaudu ulos",
   "navGettingStarted": "Aloita käyttö",
   "navOrganizations": "Organisaatioille",
@@ -25,11 +25,11 @@
   "usernameLabel": "Käyttäjätunnus:",
   "passwordLabel": "Salasana:",
   "showPassword": "Näytä salasana",
-  "loginButton": "Kirjaudu",
+  "loginButton": "Kirjaudu sisään",
   "loginError": "Virheellinen käyttäjätunnus tai salasana.",
 
   "apiWelcome": "Tervetuloa",
-  "apiExplore": "Tutustu API-avaimeesi ja muihin toimintoihin alla.",
+  "apiExplore": "Löydät API-avaimesi ja muut toiminnot alta.",
   "apiKeyLabel": "API-avain:",
   "copy": "Kopioi",
   "copied": "Kopioitu!",
