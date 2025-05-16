@@ -33,7 +33,7 @@ i18next
       loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
     },
     detection: {
-      order: ["querystring", "cookie"],
+      order: ["querystring", "header", "cookie"],
       caches: ["cookie"],
     },
   });

@@ -20,17 +20,7 @@
 
   <!-- OIKEA -->
   <div class="right-side text-end">
-    <a
-      href="?lng=fi"
-      class="language-switch <%= language === 'fi' ? 'active' : '' %>"
-      >FI</a
-    >
-    <a
-      href="?lng=en"
-      class="language-switch <%= language === 'en' ? 'active' : '' %>"
-      >EN</a
-    >
-    <% if (isLoggedIn) { %>
+      <% if (isLoggedIn) { %>
     <a href="/logout" class="nav-link"><%= t('common:navLogout') %></a>
     <% } else { %>
     <a
@@ -41,37 +31,50 @@
       ><%= t('common:navLogin') %></a
     >
     <% } %>
+    <div class="d-inline-flex gap-1 mt-1">
+    <a
+      href="?lng=fi"
+      class="language-switch <%= language === 'fi' ? 'active' : '' %>"
+      >FI</a
+    >
+    <a
+      href="?lng=en"
+      class="language-switch <%= language === 'en' ? 'active' : '' %>"
+      >EN</a
+    >
+    </div>
   </div>
 </div>
 
-<!-- Päiväyksen muodostaminen -->
-<script>
-  const days = {
-    fi: [
-      "Sunnuntai",
-      "Maanantai",
-      "Tiistai",
-      "Keskiviikko",
-      "Torstai",
-      "Perjantai",
-      "Lauantai",
-    ],
-    en: [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-  };
-  const lang = "<%= language %>" || "fi";
-  const now = new Date();
-  const dayName = days[lang][now.getDay()];
-  const date = now.getDate();
-  const month = now.getMonth() + 1;
-  const year = now.getFullYear();
-  const formatted = `${dayName} ${date}.${month}.${year}`;
-  document.getElementById("current-date").textContent = formatted;
-</script>
+  <!-- Päiväyksen muodostaminen -->
+  <script>
+    const days = {
+      fi: [
+        "Sunnuntai",
+        "Maanantai",
+        "Tiistai",
+        "Keskiviikko",
+        "Torstai",
+        "Perjantai",
+        "Lauantai",
+      ],
+      en: [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+    };
+    const lang = "<%= language %>" || "fi";
+    const now = new Date();
+    const dayName = days[lang][now.getDay()];
+    const date = now.getDate();
+    const month = now.getMonth() + 1;
+    const year = now.getFullYear();
+    const formatted = `${dayName} ${date}.${month}.${year}`;
+    document.getElementById("current-date").textContent = formatted;
+  </script>
+</div>

@@ -29,7 +29,7 @@
   "loginError": "Invalid username or password.",
 
   "apiWelcome": "Welcome",
-  "apiExplore": "Explore your API key and other features below.",
+  "apiExplore": "Find your API key and other features below.",
   "apiKeyLabel": "API key:",
   "copy": "Copy",
   "copied": "Copied!",
