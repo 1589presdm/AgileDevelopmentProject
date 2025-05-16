@@ -7,7 +7,7 @@
 
   "studentsTitle": "For Students",
   "studentsBody1": "Add links to your GitHub repositories on the <a href='/artifacts'><strong>Apps, Libs & Repos</strong></a> page to share your work with others. Discover what your peers are building and let teachers, fellow students, and potential employers see your creations.",
-  "studentsBody2": "Want hands-on practice? Register and log in to generate your own <a href='/gettingstarted'><strong>API token</strong></a> and start experimenting with <a href='/apis'><strong>Karelia's APIs</strong></a>. Perfect for learning modern web development and software production.",
+  "studentsBody2": "Want hands-on practice? Register through your teacher and log in to generate your own <a href='/gettingstarted'><strong>API token</strong></a> and start experimenting with <a href='/apis'><strong>Karelia's APIs</strong></a>. Perfect for learning modern web development and software production.",
 
   "orgsTitle": "For Organizations",
   "orgsBody": "<a href='/partners'><strong>Propose a student project and get real results.</strong></a> You'll gain access to new ideas, research insights, and fresh perspectives, all while providing students with valuable experience and increasing your visibility among future professionals."
