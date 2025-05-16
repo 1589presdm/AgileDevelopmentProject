@@ -1,12 +1,14 @@
+<!-- Blur-efekti, joka näkyy taustalla kun kirjautumisikkuna avautuu -->
 <div id="blur-overlay"></div>
-<!--Blur-efekti, joka näkyy taustalla kun kirjautumisikkuna avautuu-->
-<div class="d-flex justify-content-between" style="margin: 50">
-  <div class="lead">
-    <a href="/"> <i class="fa fa-home"></i></a>
+
+<div class="d-flex justify-content-between align-items-center header-container">
+  <!-- VASEN -->
+  <div class="left-side">
     <span id="current-date" class="ms-2"></span>
-    <!--päiväys-->
   </div>
-  <div class="text-center">
+
+  <!-- KESKI -->
+  <div class="center-logo text-center">
     <a href="/">
       <img
         src="../images/logo3.png"
@@ -15,44 +17,35 @@
       />
     </a>
   </div>
-  <div class="text-end">
-    <div class="lead">
-      <% if (isLoggedIn) { %>
-      <a href="/logout" class="nav-link"><%= t('common:navLogout') %></a>
-      <% } else { %>
-      <a
-        href="#"
-        class="nav-link"
-        data-bs-toggle="modal"
-        data-bs-target="#loginModal"
-        ><%= t('common:navLogin') %></a
-      >
-      <% } %>
 
-      <!-- Kielivalintanapit -->
-      <a
-        href="?lng=fi"
-        class="language-switch <%= language === 'fi' ? 'active' : '' %>"
-        >FI</a
-      >
-      <a
-        href="?lng=en"
-        class="language-switch <%= language === 'en' ? 'active' : '' %>"
-        >EN</a
-      >
-
-      <div id="blur-overlay"></div>
-      <div id="blur-overlay"></div>
-      <div
-        class="d-flex justify-content-between header-spacing"
-        style="margin: 100"
-      ></div>
-    </div>
+  <!-- OIKEA -->
+  <div class="right-side text-end">
+    <a
+      href="?lng=fi"
+      class="language-switch <%= language === 'fi' ? 'active' : '' %>"
+      >FI</a
+    >
+    <a
+      href="?lng=en"
+      class="language-switch <%= language === 'en' ? 'active' : '' %>"
+      >EN</a
+    >
+    <% if (isLoggedIn) { %>
+    <a href="/logout" class="nav-link"><%= t('common:navLogout') %></a>
+    <% } else { %>
+    <a
+      href="#"
+      class="nav-link"
+      data-bs-toggle="modal"
+      data-bs-target="#loginModal"
+      ><%= t('common:navLogin') %></a
+    >
+    <% } %>
   </div>
 </div>
+
 <!-- Päiväyksen muodostaminen -->
 <script>
-  // Suomi ja englanti päivät ja kuukaudet
   const days = {
     fi: [
       "Sunnuntai",
@@ -73,21 +66,12 @@
       "Saturday",
     ],
   };
-  const months = {
-    fi: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-    en: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-  };
-
-  // Valitse kieli
   const lang = "<%= language %>" || "fi";
-
   const now = new Date();
   const dayName = days[lang][now.getDay()];
   const date = now.getDate();
   const month = now.getMonth() + 1;
   const year = now.getFullYear();
-
-  // Muotoile päivämäärä
   const formatted = `${dayName} ${date}.${month}.${year}`;
   document.getElementById("current-date").textContent = formatted;
 </script>
