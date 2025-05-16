@@ -1,14 +1,14 @@
 {
-  "heroTitle": "Tervetuloa Karelia Developer Portaliin",
-  "heroSubtitle": "Alusta, jossa voit innovoida ja luoda älykkäitä kampusratkaisuja.",
+  "heroTitle": "Tervetuloa Karelia kehittäjäportaaliin",
+  "heroSubtitle": "Alustalle, jossa voit innovoida ja luoda älykkäitä kampusratkaisuja.",
 
-  "introTitle": "Mikä on Karelia Developer Portal?",
-  "introBody": "Karelia Developer Portal on osa <a href='https://www.karelia.fi/2024/06/alykampus-vihrean-siirtyman-osaamiskeskittyma/' target='_blank' rel='noopener noreferrer'><strong>Karelian Smart Campus -hanketta.</strong></a> Tämä alusta kokoaa yhteen opiskelijat, opettajat ja yhteistyökumppanit esittelemällä opiskelijoiden digitaalisia projekteja yhdessä paikassa.",
+  "introTitle": "Mikä on Karelia kehittäjäportaali?",
+  "introBody": "Karelia kehittäjäportaali on osa <a href='https://www.karelia.fi/2024/06/alykampus-vihrean-siirtyman-osaamiskeskittyma/' target='_blank' rel='noopener noreferrer'><strong>Karelian Älykampus -hanketta.</strong></a> Tämä alusta kokoaa yhteen opiskelijat, opettajat ja yhteistyökumppanit esittelemällä opiskelijoiden digiprojekteja yhdessä paikassa.",
 
   "studentsTitle": "Opiskelijoille",
-  "studentsBody1": "Lisää linkkejä GitHub-repositorioihisi <a href='/artifacts'><strong>Apps, Libs & Repos</strong></a> -sivulle jakaaksesi työsi muiden kanssa. Katso mitä muut rakentavat ja anna opettajien, opiskelijoiden ja mahdollisten työnantajien nähdä tuotoksesi.",
-  "studentsBody2": "Haluatko käytännön harjoitusta? Rekisteröidy ja kirjaudu sisään luodaksesi oman <a href='/gettingstarted'><strong>API-tunnisteesi</strong></a> ja aloita kokeilut <a href='/apis'><strong>Karelian API-rajapinnoilla</strong></a>. Täydellinen tapa oppia modernia web-kehitystä ja ohjelmistotuotantoa.",
+  "studentsBody1": "Lisää linkkejä esimerkiksi GitHub-repositorioihisi <a href='/artifacts'><strong>Apps, Libs & Repos</strong></a> -sivulla jakaaksesi työsi muiden kanssa. Anna opettajien, opiskelijoiden ja mahdollisten työnantajien nähdä tuotoksesi, ja tutki, mitä opiskelijatoverisi ovat saaneet aikaan.",
+  "studentsBody2": "Haluatko käytännön harjoitusta? Rekisteröidy opettajasi kautta ja kirjaudu sisään luodaksesi oman <a href='/gettingstarted'><strong>API-tunnisteesi</strong></a> ja aloita kokeilut <a href='/apis'><strong>Karelian API-rajapinnoilla</strong></a>. Täydellinen tapa oppia modernia web-kehitystä ja ohjelmistotuotantoa.",
 
   "orgsTitle": "Organisaatioille",
-  "orgsBody": "<a href='/partners'><strong>Ehdota opiskelijaprojektia ja saa konkreettisia tuloksia.</strong></a> Saat käyttöösi uusia ideoita, tutkimustietoa ja tuoreita näkökulmia — samalla kun tarjoat opiskelijoille arvokasta kokemusta ja lisäät näkyvyyttäsi tulevien ammattilaisten keskuudessa."
+  "orgsBody": "<a href='/partners'><strong>Ehdota opiskelijaprojektia ja saa konkreettisia tuloksia.</strong></a> Saat opiskelijoilta uusia ideoita, viimeistä tutkimustietoa ja tuoreita näkökulmia. Samalla tarjoat opiskelijoille arvokasta kokemusta ja lisäät näkyvyyttäsi tulevaisuuden tekijöiden parissa."
 }
