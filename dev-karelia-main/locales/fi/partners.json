@@ -1,39 +1,39 @@
 {
-  "developTitle": "Kehitä Ratkaisujasi Opiskelijatiimin Kanssa",
-  "developBody1": "Työelämäorientoituminen näkyy opetuksessamme erilaisten opiskelijaprojektien kautta. Nämä projektit tarjoavat työnantajille erinomaisen mahdollisuuden ottaa mukaan taitavat ja innostuneet opiskelijamme. Projektien tulokset tarjoavat ratkaisuja ja ideoita määrittelemääsi käytännön ongelmaan, olipa kyseessä markkinointisuunnitelma tai tuotekehitys.",
-  "developBody2": "Työn laajuus, aikataulu ja toteutustavat räätälöidään aina yhteistyössä tarpeiden mukaan.",
+  "developTitle": "Kehitä ratkaisuja opiskelijatiimin kanssa",
+  "developBody1": "Työelämäorientaatio näkyy opetuksessamme erilaisten käytännön projektien kautta. Nämä projektit tarjoavat työnantajille erinomaisen mahdollisuuden ottaa mukaan taitavat ja innostuneet opiskelijamme. Projektien tuloksena syntyy ratkaisuja ja ideoita määrittelemääsi käytännön ongelmaan, olipa kyseessä markkinointisuunnitelma tai tuotekehitys.",
+  "developBody2": "Työn laajuus, aikataulu ja toteutustavat räätälöidään aina yhteistyössä organisaatiosi tarpeiden mukaan.",
 
-  "proposeTitle": "Ehdota Projektiaihetta ja Saat Hyötyä",
+  "proposeTitle": "Ehdota projektiaihetta ja hyödy",
   "proposeBody1": "Uusia näkökulmia ja kehitysideoita haasteiden ratkaisemiseen.",
   "proposeBody2": "Viimeisimmät tutkimustulokset toiminnan kehittämiseksi.",
   "proposeBody3": "Pääsy moderniin oppimis- ja palveluympäristöömme.",
-  "proposeBody4": "Positiivista näkyvyyttä ja mahdollisuus esitellä yrityksesi potentiaalisille tuleville työntekijöille.",
+  "proposeBody4": "Saat positiivista näkyvyyttä yrityksellesi tulevaisuuden osaajien keskuudessa.",
 
-  "workflowTitle": "Projektin Työprosessi",
-  "workflowStep1": "1. Määrittele Projektin Sisältö",
-  "workflowStep1Body1": "Minkä käytännön ongelman ratkaisemiseksi tarvitset ratkaisua?",
+  "workflowTitle": "Projektin kulku",
+  "workflowStep1": "1. Määrittele projektin sisältö",
+  "workflowStep1Body1": "Mikä käytännön ongelma tarvitsee ratkaisua?",
   "workflowStep1Body2": "Minkälaista osaamista tarvitset?",
 
-  "workflowStep2": "2. Ota Yhteyttä",
+  "workflowStep2": "2. Ota yhteyttä",
   "workflowStep2Body": "Sähköposti: <a href='mailto:palvelut@karelia.fi'><strong>palvelut@karelia.fi</strong></a>",
 
-  "workflowStep3": "3. Sovitaan Toteutuksesta",
-  "workflowStep3Body": "Määritellään laajuus, aikataulu ja lähestymistapa yhdessä.",
+  "workflowStep3": "3. Sovitaan toteutus",
+  "workflowStep3Body": "Määritellään projektin laajuus, aikataulu ja lähestymistapa yhdessä.",
 
-  "workflowStep4": "4. Opiskelijat Toteuttavat Projektin",
-  "workflowStep4Body": "Opettajan ohjauksessa. Asiakkaan väliaikaiset kokoukset voidaan järjestää tarpeen mukaan.",
+  "workflowStep4": "4. Opiskelijat toteuttavat projektin",
+  "workflowStep4Body": "Projekti etenee opettajan ohjauksessa. Asiakkaan kanssa voidaan järjestää kokouksia tarpeen mukaan.",
 
-  "workflowStep5": "5. Esitysten Tulokset",
-  "workflowStep5Body": "Olet lämpimästi tervetullut osallistumaan ja antamaan palautetta esityksistä!",
+  "workflowStep5": "5. Tulosten esittely",
+  "workflowStep5Body": "Olet lämpimästi tervetullut osallistumaan ja antamaan palautetta tuloksista.",
 
-  "durationTitle": "Kesto ja Aikataulu",
-  "durationBody1": "Aikataulu vaihtelee tapauskohtaisesti, 12 päivästä koko lukukauteen.",
-  "durationBody2": "Projektiehdotuksia voi tehdä ympäri vuoden.",
-  "durationBody3": "Toteutus tapahtuu seuraavana lukukautena (esim. ehdotus syksyllä → toteutus keväällä).",
+  "durationTitle": "Kesto ja aikataulu",
+  "durationBody1": "Projektin kesto määräytyy tapauskohtaisesti ja voi vaihdella 12 päivästä koko lukukauteen.",
+  "durationBody2": "Projektiehdotuksia voi lähettää ympäri vuoden.",
+  "durationBody3": "Toteutus tapahtuu seuraavana lukukautena. Esimerkiksi: ehdotus syksyllä → toteutus keväällä.",
   "durationBody4": "Projektit sisältyvät tiettyihin opintokokonaisuuksiin.",
 
-  "clientTitle": "Mitä Asiakkaalta Odotetaan?",
-  "clientBody1": "Vaateet riippuvat projektin laajuudesta.",
-  "clientBody2": "Osallistuminen opiskelijoiden ja yliopiston edustajien kokouksiin tarpeen mukaan.",
-  "clientBody3": "Tiedon ja viestinnän tarjoaminen projektin toteutusta tukemaan."
+  "clientTitle": "Miten asiakas osallistuu projektiin?",
+  "clientBody1": "Osallistumisen tarve määräytyy projektin laajuuden mukaan.",
+  "clientBody2": "Läsnäolo opiskelijoiden ja yliopiston edustajien kokouksissa tarpeen mukaan.",
+  "clientBody3": "Tarvittavan tiedon jakaminen ja yhteydenpito projektin edistämiseksi."
 }
