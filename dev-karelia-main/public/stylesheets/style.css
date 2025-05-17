@@ -448,3 +448,75 @@ button[type="submit"]:active {
 .allow-linebreaks {
   white-space: normal;
 }
+
+.hero-wrapper {
+  background-image: url("../images/valopuu.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text-wrapper {
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero-title,
+.hero-subtitle {
+  margin: 0 auto;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.hero-title {
+  font-size: clamp(1.2rem, 6vw, 2rem);
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 4.5vw, 1.5rem);
+  margin-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .hero-text-wrapper {
+    max-width: 1000px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .first-partner-section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .first-partner-section p,
+  .first-partner-section h2 {
+    text-align: center;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+  }
+}
+
+@media (max-width: 576px) {
+  main.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

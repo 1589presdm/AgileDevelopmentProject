@@ -28,11 +28,11 @@
   <body class="text-white">
     <header><%- include('./header'); %></header>
 
-    <main class="container text-center">
+    <main class="container d-flex flex-column align-items-center text-center">
       <div><%- include('./tabs'); %></div>
 
       <section
-        class="bg-secondary bg-gradient p-5 rounded shadow mb-5 scroll-fade-in"
+        class="scroll-fade-in bg-secondary bg-gradient p-5 rounded shadow mb-5 first-partner-section"
       >
         <h2 class="mb-4"><%= t('partners:developTitle') %></h2>
         <p><%- t('partners:developBody1') %></p>
