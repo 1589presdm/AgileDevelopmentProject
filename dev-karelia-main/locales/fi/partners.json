@@ -17,7 +17,7 @@
   "workflowStep2": "2. Ota yhteyttä",
   "workflowStep2Body": "Sähköposti: <a href='mailto:palvelut@karelia.fi'><strong>palvelut@karelia.fi</strong></a>",
 
-  "workflowStep3": "3. Sovitaan toteutus",
+  "workflowStep3": "3. Sovitaan toteutuksesta",
   "workflowStep3Body": "Määritellään projektin laajuus, aikataulu ja lähestymistapa yhdessä.",
 
   "workflowStep4": "4. Opiskelijat toteuttavat projektin",
@@ -29,7 +29,7 @@
   "durationTitle": "Kesto ja aikataulu",
   "durationBody1": "Projektin kesto määräytyy tapauskohtaisesti ja voi vaihdella 12 päivästä koko lukukauteen.",
   "durationBody2": "Projektiehdotuksia voi lähettää ympäri vuoden.",
-  "durationBody3": "Toteutus tapahtuu seuraavana lukukautena. Esimerkiksi: ehdotus syksyllä → toteutus keväällä.",
+  "durationBody3": "Toteutus on seuraavana lukukautena. Esimerkiksi: ehdotus syksyllä → toteutus keväällä.",
   "durationBody4": "Projektit sisältyvät tiettyihin opintokokonaisuuksiin.",
 
   "clientTitle": "Miten asiakas osallistuu projektiin?",
