@@ -352,7 +352,7 @@ button[type="submit"]:active {
 
 /* Palautelaatikon taustaväri */
 .modal-content {
-  background-color: #2d2d32; /* Vaaleanharmaa taustaväri */
+  background-color: #111; /* Vaaleanharmaa taustaväri */
   color: whitesmoke; /* vaalea teksti */
   border-radius: 10px; /* Pyöristetyt kulmat */
   padding: 20px; /* Sisennykset */
