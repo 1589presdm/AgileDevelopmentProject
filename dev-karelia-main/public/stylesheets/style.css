@@ -498,11 +498,3 @@ button[type="submit"]:active {
     font-size: 2rem;
   }
 }
-
-.first-partner-section p,
-.first-partner-section h2 {
-  text-align: center;
-  word-break: normal;
-  overflow-wrap: break-word;
-  hyphens: none;
-}
