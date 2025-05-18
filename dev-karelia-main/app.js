@@ -33,7 +33,7 @@ i18next
       loadPath: path.join(__dirname, "locales/{{lng}}/{{ns}}.json"),
     },
     detection: {
-      order: ["querystring", "header", "cookie"],
+      order: ["cookie", "querystring", "header"],
       caches: ["cookie"],
     },
   });
@@ -45,8 +45,8 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.locals.t = req.t; // t-funktio näkymiin
-  res.locals.lng = req.lng;
+  res.locals.t = req.t;
+  res.locals.lng = req.language;
   next();
 });
 
@@ -60,6 +60,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(sessionRouter);
+
+app.get("/change-language/:lng", (req, res) => {
+  const newLang = req.params.lng;
+  res.cookie("i18next", newLang, {
+    maxAge: 1000 * 60 * 60 * 24 * 365, // vaikuttaa kielivalinnan pysyvyyteen
+    httpOnly: false,
+  });
+  const returnTo = req.get("Referer") || "/";
+  res.redirect(returnTo);
+});
 
 app.use("/", indexRouter);
 app.use("/partners", partnersRouter);
