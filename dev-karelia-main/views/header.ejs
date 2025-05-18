@@ -32,16 +32,10 @@
     >
     <% } %>
     <div class="d-inline-flex gap-1 mt-1">
-    <a
-      href="?lng=fi"
-      class="language-switch <%= language === 'fi' ? 'active' : '' %>"
-      >FI</a
-    >
-    <a
-      href="?lng=en"
-      class="language-switch <%= language === 'en' ? 'active' : '' %>"
-      >EN</a
-    >
+<a href="/change-language/fi" class="language-switch <%= lng === 'fi' ? 'active' : '' %>">FI</a>
+<a href="/change-language/en" class="language-switch <%= lng === 'en' ? 'active' : '' %>">EN</a>
+
+
     </div>
   </div>
 </div>
@@ -68,7 +62,7 @@
         "Saturday",
       ],
     };
-    const lang = "<%= language %>" || "fi";
+    const lang = "<%= lng %>" || "fi";
     const now = new Date();
     const dayName = days[lang][now.getDay()];
     const date = now.getDate();
