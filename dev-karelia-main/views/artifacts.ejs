@@ -1,3 +1,13 @@
+<!-- 
+Tarkennettu haku poistettu käytöstä tilapäisesti
+Seuraava HTML- ja JavaScript-koodi vastaa sivun tarkennetun haun toiminnallisuudesta.
+Komponentit: 
+- Ratasikoni — avaa suodatusvalikon. 
+- `#advancedSearchOptions` -lohko — sisältää suodatukset kirjaimen, kategorian ja tagien mukaan.
+- `toggleAdvancedSearch` -skripti — näyttää/piilottaa suodatuspaneelin.
+Tarvittaessa suodatuslogiikkaa voi mukauttaa korttien rakenteen mukaan 
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,77 +21,88 @@
       <div><%- include('./tabs'); %></div>
 
       <!-- hakupalkki -->
-<div class="search-wrapper align-items-center">
-  <span id="toggleAdvancedSearch" class="burger-icon me-2">&#9881;</span>
-  <input
-    type="text"
-    id="searchInput"
-    class="search-input"
-    placeholder="<%= t('common:searchPlaceholder') %>"
-  />
-</div>
+      <div class="search-wrapper align-items-center">
+        <!-- <span id="toggleAdvancedSearch" class="burger-icon me-2">&#9881;</span> -->
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="<%= t('common:searchPlaceholder') %>"
+        />
+      </div>
 
-      <div id="advancedSearchOptions" style="display: none;" class="text-center mt-4">
+      <div
+        id="advancedSearchOptions"
+        style="display: none"
+        class="text-center mt-4"
+      >
+        <!-- kirjainsuodatus (suodata ensimmäisen kirjaimen mukaan) -->
+        <h6 class="text-light mb-2">Filter by First Letter</h6>
+        <div class="letter-filter text-center my-3">
+          <button
+            class="btn btn-sm btn-outline-light mx-1 letter-btn"
+            data-letter="All"
+          >
+            All
+          </button>
+          <script>
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            document.write(
+              letters
+                .map(
+                  (l) =>
+                    `<button class="btn btn-sm btn-outline-light mx-1 letter-btn" data-letter="${l}">${l}</button>`
+                )
+                .join("")
+            );
+          </script>
+        </div>
 
-          <!-- kirjainsuodatus (suodata ensimmäisen kirjaimen mukaan) -->
-          <h6 class="text-light mb-2">Filter by First Letter</h6>
-          <div class="letter-filter text-center my-3">
-            <button class="btn btn-sm btn-outline-light mx-1 letter-btn" data-letter="All">All</button>
-             <script>
-              const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-              document.write(
-              letters.map(l => `<button class="btn btn-sm btn-outline-light mx-1 letter-btn" data-letter="${l}">${l}</button>`).join("")
-              );
-              </script>
-          </div>
-    
-          <!-- kategoriat  -->
-          <h6 class="text-light mb-2">Filter by Category</h6>
+        <!-- kategoriat  -->
+        <!-- <h6 class="text-light mb-2">Filter by Category</h6>
           <div class="filter-buttons text-center mb-4">
             <button class="btn btn-outline-light category-filter" data-filter="all">All</button>
             <button class="btn btn-outline-light category-filter" data-filter="application">Applications</button>
             <button class="btn btn-outline-light category-filter" data-filter="library">Libraries</button>
             <button class="btn btn-outline-light category-filter" data-filter="repo">Repositories</button>
-          </div>
-    
-           <!-- tag-suodatus -->
-           <h6 class="text-light mb-2">Filter by Tags</h6>
+          </div>  -->
+
+        <!-- tag-suodatus -->
+        <!-- <h6 class="text-light mb-2">Filter by Tags</h6>
            <div class="tag-filter-group text-center mb-4">
             <button class="btn btn-outline-light tag-btn" data-tag="IoT">IoT</button>
             <button class="btn btn-outline-light tag-btn" data-tag="Thesis">Thesis</button>
             <button class="btn btn-outline-light tag-btn" data-tag="Open Source">Open Source</button>
-          </div></div>
-
+          </div> -->
       </div>
-     
+
       <div class="container mt-4">
         <div class="row g-4 justify-content-center">
-          <% if (artifacts && artifacts.length > 0) { %>
-            <% artifacts.forEach(artifact => { %>
-              <div class="col-md-3" data-category="application">
-                <div class="card card-hover text-center h-100">
-                  <img
-                    class="card-img-top mx-auto d-block mt-3"
-                    src="<%= artifact.image %>"
-                    style="width: 120px; height: 120px"
-                    alt="Card image"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title"><%= artifact.name %></h5>
-                    <p class="card-text"><%= artifact.description %></p>
-                    <a
-                      href="<%= artifact.link %>"
-                      class="btn btn-karelia"
-                      target="_blank"
-                    >
-                      Repository
-                    </a>
-                  </div>
-                </div>
+          <% if (artifacts && artifacts.length > 0) { %> <%
+          artifacts.forEach(artifact => { %>
+          <div class="col-md-3" data-category="application">
+            <div class="card card-hover text-center h-100">
+              <img
+                class="card-img-top mx-auto d-block mt-3"
+                src="<%= artifact.image %>"
+                style="width: 120px; height: 120px"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><%= artifact.name %></h5>
+                <p class="card-text"><%= artifact.description %></p>
+                <a
+                  href="<%= artifact.link %>"
+                  class="btn btn-karelia"
+                  target="_blank"
+                >
+                  Repository
+                </a>
               </div>
-            <% }); %>
-          <% } else { %>
-            <p class="text-center text-light">Ei tietoja saatavilla.</p>
+            </div>
+          </div>
+          <% }); %> <% } else { %>
+          <p class="text-center text-light">Ei tietoja saatavilla.</p>
           <% } %>
         </div>
       </div>
@@ -89,50 +110,49 @@
     <div style="margin-top: 150px"></div>
     <footer><%- include('./footer'); %></footer>
 
+    <!-- live search testivaiheessa -->
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const cards = document.querySelectorAll(".card");
 
-<!-- live search testivaiheessa -->
-<script>
-  const searchInput = document.getElementById("searchInput");
-  const cards = document.querySelectorAll(".card");
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
 
-  searchInput.addEventListener("input", function () {
-    const query = this.value.toLowerCase();
+        cards.forEach((card) => {
+          const title = card.querySelector(".card-title");
+          const description = card.querySelector(".card-text");
 
-    cards.forEach((card) => {
-      const title = card.querySelector(".card-title");
-      const description = card.querySelector(".card-text");
+          const titleText = title.textContent;
+          const descText = description.textContent;
 
-      const titleText = title.textContent;
-      const descText = description.textContent;
+          const titleLower = titleText.toLowerCase();
+          const descLower = descText.toLowerCase();
 
-      const titleLower = titleText.toLowerCase();
-      const descLower = descText.toLowerCase();
+          if (titleLower.includes(query) || descLower.includes(query)) {
+            card.parentElement.style.display = "block";
 
-      if (titleLower.includes(query) || descLower.includes(query)) {
-        card.parentElement.style.display = "block";
+            if (query.length > 0) {
+              title.innerHTML = titleText.replace(
+                new RegExp(`(${query})`, "gi"),
+                "<strong>$1</strong>"
+              );
+              description.innerHTML = descText.replace(
+                new RegExp(`(${query})`, "gi"),
+                "<strong>$1</strong>"
+              );
+            } else {
+              title.innerHTML = titleText;
+              description.innerHTML = descText;
+            }
+          } else {
+            card.parentElement.style.display = "none";
+          }
+        });
+      });
+    </script>
 
-        if (query.length > 0) {
-          title.innerHTML = titleText.replace(
-            new RegExp(`(${query})`, "gi"),
-            "<strong>$1</strong>"
-          );
-          description.innerHTML = descText.replace(
-            new RegExp(`(${query})`, "gi"),
-            "<strong>$1</strong>"
-          );
-        } else {
-          title.innerHTML = titleText;
-          description.innerHTML = descText;
-        }
-      } else {
-        card.parentElement.style.display = "none";
-      }
-    });
-  });
-</script>
-
-<!-- tag-suodatus logiikka -->
-<script>
+    <!-- tag-suodatus logiikka -->
+    <!-- <script>
   const tagButtons = document.querySelectorAll(".tag-btn");
   tagButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -151,10 +171,10 @@
       });
     });
   });
-</script>
+</script> -->
 
-<!-- suodatus otsikon ensimmäisen kirjaimen perusteella -->
-<script>
+    <!-- suodatus otsikon ensimmäisen kirjaimen perusteella -->
+    <!-- <script>
   const letterButtons = document.querySelectorAll('.letter-btn');
 
   letterButtons.forEach(button => {
@@ -173,10 +193,10 @@
       });
     });
   });
-</script>
+</script> -->
 
-<!-- kategoriasuodatus -->
-<script>
+    <!-- kategoriasuodatus -->
+    <!-- <script>
   const categoryButtons = document.querySelectorAll(".category-filter");
 
   categoryButtons.forEach(button => {
@@ -194,9 +214,9 @@
       });
     });
   });
-</script>
+</script> -->
 
-<!-- tarkennettu hakupaneeli -->
+    <!-- tarkennettu hakupaneeli 
 <script>
   document.getElementById("toggleAdvancedSearch").addEventListener("click", function () {
     const panel = document.getElementById("advancedSearchOptions");
@@ -206,7 +226,6 @@
       panel.style.display = "none";
     }
   });
-</script>
-
-</body>
+</script> -->
+  </body>
 </html>
