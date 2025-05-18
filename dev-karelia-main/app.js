@@ -64,11 +64,18 @@ app.use(sessionRouter);
 app.get("/change-language/:lng", (req, res) => {
   const newLang = req.params.lng;
   res.cookie("i18next", newLang, {
-    maxAge: 1000 * 60 * 60 * 24 * 365, // vaikuttaa kielivalinnan pysyvyyteen
+    maxAge: 1000 * 60 * 60 * 24 * 365, // affects the cookie expiration time
     httpOnly: false,
   });
   const returnTo = req.get("Referer") || "/";
   res.redirect(returnTo);
+});
+
+app.get("/debug-lang", (req, res) => {
+  res.send({
+    detectedLng: req.language,
+    t_common_login: req.t("common:navLogin"),
+  });
 });
 
 app.use("/", indexRouter);

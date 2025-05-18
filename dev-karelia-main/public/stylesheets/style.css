@@ -499,24 +499,10 @@ button[type="submit"]:active {
   }
 }
 
-@media (max-width: 576px) {
-  .first-partner-section {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-  }
-
-  .first-partner-section p,
-  .first-partner-section h2 {
-    text-align: center;
-    word-break: normal;
-    overflow-wrap: break-word;
-    hyphens: none;
-  }
-}
-
-@media (max-width: 576px) {
-  main.container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+.first-partner-section p,
+.first-partner-section h2 {
+  text-align: center;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
