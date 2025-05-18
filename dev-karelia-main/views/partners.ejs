@@ -25,23 +25,22 @@
     });
   </script>
 
-  <body class="text-white">
+  <body>
     <header><%- include('./header'); %></header>
 
-    <main class="container d-flex flex-column align-items-center text-center">
-      <div><%- include('./tabs'); %></div>
+  <main>
+  <div><%- include('./tabs'); %></div>
 
-      <section
-        class="scroll-fade-in bg-secondary bg-gradient p-5 rounded shadow mb-5 first-partner-section"
-      >
-        <div class="container-fluid px-3 px-sm-4 px-md-5">
-          <h2 class="mb-4"><%= t('partners:developTitle') %></h2>
-          <p><%- t('partners:developBody1') %></p>
-          <p><%- t('partners:developBody2') %></p>
-        </div>
-      </section>
+  <div class="container-fluid">
+    <section
+      class="scroll-fade-in bg-secondary bg-gradient p-5 rounded shadow mb-5 text-center"
+    >
+      <h2 class="mb-4"><%= t('partners:developTitle') %></h2>
+      <p><%- t('partners:developBody1') %></p>
+      <p><%- t('partners:developBody2') %></p>
+    </section>
 
-      <section class="mb-5 scroll-fade-in">
+      <section class="mb-5 scroll-fade-in text-center">
         <h3 class="mb-3"><%= t('partners:proposeTitle') %></h3>
         <ul class="list-group list-group-flush">
           <li class="list-group-item bg-transparent text-white border-0">
@@ -60,7 +59,7 @@
         </ul>
       </section>
 
-      <section class="mb-5 scroll-fade-in">
+      <section class="mb-5 scroll-fade-in text-center">
         <h3 class="mb-3"><%= t('partners:workflowTitle') %></h3>
         <div class="row g-4 justify-content-center text-start">
           <div class="col-md-6 col-lg-5">
@@ -114,7 +113,7 @@
         </div>
       </section>
 
-      <section class="mb-5 scroll-fade-in">
+      <section class="mb-5 scroll-fade-in text-center">
         <h3 class="mb-3"><%= t('partners:durationTitle') %></h3>
         <ul class="list-group list-group-flush">
           <li class="list-group-item bg-transparent text-white border-0">
@@ -132,7 +131,7 @@
         </ul>
       </section>
 
-      <section class="mb-5 scroll-fade-in">
+      <section class="mb-5 scroll-fade-in text-center">
         <h3 class="mb-3"><%= t('partners:clientTitle') %></h3>
         <ul class="list-group list-group-flush">
           <li class="list-group-item bg-transparent text-white border-0">
