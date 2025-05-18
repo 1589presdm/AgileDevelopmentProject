@@ -37,6 +37,7 @@
   "addAppDesc": "Lisää uusi sovellus, kirjasto tai repositorio.",
   "addApiTitle": "Lisää uusi API",
   "addApiDesc": "Uuden rajapintatietueen luonti.",
+  "addApiButton": "Lisää",
   "nameLabel": "Nimi",
   "descriptionLabel": "Kuvaus",
   "linkLabel": "Linkki",
