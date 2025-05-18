@@ -2,8 +2,6 @@
 <html>
   <head>
     <%- include('./head'); %>
-
-
   </head>
 
   <body>
@@ -14,7 +12,7 @@
         <!-- Jumbotron -->
         <!-- <div class="row bg-image d-flex justify-content-center align-items-center" -->
         <div
-          class="row bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white align-items-center"
+          class="row bg-image p-4 text-center shadow-1-strong rounded mb-5 text-white align-items-center"
         >
         
         <!--<p class="mb-3 h4">Access the Karelia APIs</p>
@@ -30,41 +28,31 @@
       </div>
 
 
-      <!--animoidun otsikon lisääminen-->
-      <div class="text-center my-5">
-        <h1 class="animated-title"><%= t('gettingstarted:gettingStartedTitle') %></h1>
-      </div>
-      <!--Luodaan getting started rakenne ja lisätään numerokuvat-->
-      
-      <div class="row justify-content-center" style="margin-top: -10px;">
-        <div class="col-md-6">
-          <div class="d-flex mb-3 fade-in">
-            <img src="/images/nro1.png" alt="Image 1" class="me-3" style="width: 80px; height: 80px;">
-            <div class="text-center">
-              <h3><%= t('gettingstarted:step1Title') %></h3>
-              <p><%- t('gettingstarted:step1Body') %></p>
-            </div>
-          </div> 
-          <div class="row justify-content-center">
-            <div class="col-md-6">
-              <div class="d-flex mb-3 fade-in">
-                <img src="/images/nro2.png" alt="Image 2" class="me-3" style="width: 80px; height: 80px;">
-                <div class="text-center">
-                  <h3><%= t('gettingstarted:step2Title') %></h3>
-                  <p><%= t('gettingstarted:step2Body') %></p>
-                </div>
-              </div> 
-              <div class="row justify-content-center">
-                <div class="col-md-6">
-                  <div class="d-flex align-items-center justify-content-center mb-3 fade-in">
-                    <img src="/images/nro3.png" alt="Image 3" class="me-3" style="width: 80px; height: 80px;">
-                    <div class="text-center">
-                      <h3><%= t('gettingstarted:step3Title') %></h3>
-                      <p><%- t('gettingstarted:step3Body') %></p>
-                    </div>
-                  </div> 
-                  
-                      </div>
+<!-- Animoitu otsikko -->
+<div class="text-center my-5 mx-auto">
+  <h1 class="animated-title"><%= t('gettingstarted:gettingStartedTitle') %></h1>
+</div>
+
+<!-- teksti-->
+<div class="container text-center">
+  <div class="my-5 fade-in">
+    <h3><%= t('gettingstarted:step1Title') %></h3>
+    <p><%- t('gettingstarted:step1Body') %></p>
+  </div>
+
+  <div class="my-5 fade-in">
+    <h3><%= t('gettingstarted:step2Title') %></h3>
+    <p><%= t('gettingstarted:step2Body') %></p>
+  </div>
+
+  <div class="my-5 fade-in">
+    <h3><%= t('gettingstarted:step3Title') %></h3>
+    <p><%- t('gettingstarted:step3Body') %></p>
+  </div>
+</div>
+
+</div>
+
                     </div>
                   </div>
     </main>
