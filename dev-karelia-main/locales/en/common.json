@@ -37,6 +37,7 @@
   "addAppDesc": "Create a new app, library or repository.",
   "addApiTitle": "Add new API",
   "addApiDesc": "Create a new API record.",
+  "addApiButton": "Add",
   "nameLabel": "Name",
   "descriptionLabel": "Description",
   "linkLabel": "Link",
